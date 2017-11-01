@@ -1,0 +1,1327 @@
+package TheMistyIsles;
+import java.util.Scanner;
+public class Events {
+
+	//TODO: add the spirit groin kick
+
+	boolean QuestOption;
+	// Jeremy Robb
+	//FormerZone1 events
+	boolean Pub;
+	boolean regurgitatery1;
+	boolean cocostart;
+	boolean cocowork = false;
+	boolean cocodead;
+	boolean cocobowl;
+	boolean cocoalive;
+	boolean coco = false;
+	boolean cocoend;
+	boolean Choice = false;
+
+	boolean bandits = false;
+	boolean banditsdone = false;
+
+	//FormerZone1 areas
+	boolean BanditCoop = false;
+	boolean Chicken1 = false;
+	boolean Chicken1Alive = false;
+
+	boolean Mugging = false;
+	boolean MuggingS = false;
+
+	boolean Chicken2 = false;
+
+	boolean MasterOogway = false;
+	boolean LockOpen = false;
+	
+	boolean bureaucracy = false;
+	boolean B1;
+	boolean B2;
+	boolean B3;
+	boolean B4;
+	boolean B5;
+	boolean B6;
+	boolean BStart = false;
+	boolean BDone = false;
+	boolean Battack = true;
+	boolean Blost = false;
+	boolean Bwon = false;
+
+	//FormerZone1 quests
+	boolean QuestZone;
+
+	boolean math;
+	boolean Inkeep;
+	boolean Riddles;
+	boolean banditD;
+	boolean Stick = false;
+	
+
+	boolean Duel = false;
+	boolean DuelIntro = false;
+
+	boolean Magic;
+	boolean MagicP1;
+	boolean MagicP2;
+	boolean MagicP3;
+
+
+	int Wrongs = 0;
+
+	Scanner choice = new Scanner(System.in);
+
+	//Character starting attributes
+	int hp = 5;
+	int hpleft = hp;
+	int damage = 1;
+	int Mdamage = 1;
+	int armor = 1;
+	int Marmor = 1;
+	int energy = 2;
+	int mana = 2;
+	int manaleft = mana;
+	int energyleft = energy;
+	int rep;
+	int Srep;
+	int level = 1;
+	int xpR = 0; 
+	int xp = 10;
+	int intel = 0;
+	int mastery = 0;
+	int speed = 2;
+	int attack = 3;
+
+	//character perks
+
+	boolean cocky = false;
+	boolean saturated = false;
+	boolean dweeb = false;
+	boolean hardcore = false;
+	boolean lost = false;
+	boolean drunk = false;
+	boolean savage = false;
+	boolean refreshed = false;
+
+	//fighting stats
+	
+	boolean Oogway = false;
+	boolean Granny = false;
+	boolean Emerald = false;
+	
+	boolean OogwayU = false;
+	boolean GrannyU = false;
+	boolean EmeraldU = false;
+	
+	boolean Ally = false;
+	
+	int hpA;
+	int damageA;
+	int MdamageA;
+	int armorA;
+	int MarmorA;
+	int attackA;
+	int finalhitA;
+	
+	boolean ATurn = true;
+	
+	boolean GroinKick = false;
+
+	int min;
+	int max;
+	int range;
+	
+	boolean Cr1 = false;
+	boolean Cr2 = false;
+	boolean Cr3 = false;
+
+	int finalhit = attack;
+
+	boolean Turn = true;
+	boolean Battle = true;
+	boolean win = false;
+	boolean EStun1 = false;
+	boolean EStun2 = false;
+	boolean EStun3 = false;
+	boolean Eturn1 = true;
+	boolean Eturn2 = true;
+	boolean Eturn3 = true;
+	
+	boolean Bolster = false;
+
+	int hpE1;
+	int damageE1;
+	int MdamageE1;
+	int armorE1;
+	int MarmorE1;
+	int energyE1;
+	int manaE1;
+	int attackE1;
+	int finalhitE1;
+
+	int hpE2;
+	int damageE2;
+	int MdamageE2;
+	int armorE2;
+	int MarmorE2;
+	int energyE2;
+	int manaE2;
+	int attackE2;
+	int finalhitE2;
+
+	int hpE3;
+	int damageE3;
+	int MdamageE3;
+	int armorE3;
+	int MarmorE3;
+	int energyE3;
+	int manaE3;
+	int attackE3;
+	int finalhitE3;
+
+	String name;
+
+	//nicknames
+	boolean nerd = false;
+	boolean nerdA = false;
+	boolean misstype = false;
+	boolean misstypeA = false;
+	boolean DebbieDowner = false;
+	boolean DebbieDownerA = false;
+	boolean mooreaucracy = false;
+	boolean mooreaucracyA = false;
+	boolean Rebel = false;
+	boolean RebelA = false;
+
+	//abilities
+	boolean StudyE;
+
+	boolean BloodyHeadbutt = false;
+	double BloodyHeadbuttChance;
+	int BloodyHeadbuttFinal;
+
+	//leveling up
+	boolean lvlup;
+	boolean levelchoice;
+
+	boolean hpC1;
+	boolean damageC1;
+	boolean MdamageC1;
+	boolean armorC1;
+	boolean MarmorC1;
+	boolean energyC1;
+	boolean manaC1;
+	boolean attackC1;
+
+	boolean hpC2;
+	boolean damageC2;
+	boolean MdamageC2;
+	boolean armorC2;
+	boolean MarmorC2;
+	boolean energyC2;
+	boolean manaC2;
+	boolean attackC2;
+
+	boolean hpC3;
+	boolean damageC3;
+	boolean MdamageC3;
+	boolean armorC3;
+	boolean MarmorC3;
+	boolean energyC3;
+	boolean manaC3;
+	boolean attackC3;
+
+	int ManaUnlock = 3;
+	int EnergyUnlock = 4;
+	int ManaCounter = 0;
+	int EnergyCounter = 0;
+
+	//leveling abilities
+	boolean heal = false;
+	boolean slam = false;
+
+	boolean two = false;
+	boolean three = false;
+	boolean StatsOption = false;
+
+	//former starters
+	boolean rat;
+	boolean duck;
+	boolean squirrel;
+
+	//subsequent starters
+	boolean murlok;
+	boolean imp;
+	boolean bristle;
+
+	boolean thirdchoice = false;
+
+	boolean firstchoice = false;
+	boolean secondchoice = false;
+	boolean former = false;
+	boolean subsequent = false;
+
+	boolean option;
+
+
+	String Fname;
+	String Lname;
+	String answer;
+
+
+	/*if (answer.equals("Mdamage")) {
+		Mdamage += 1;
+		boolean MdamageC1 = true;
+	}
+	 */
+	/*if (XE == true) {
+	System.out.print("X | ");
+	}
+	 */
+
+	//loot
+
+	boolean Uoption;
+	boolean room;
+
+	boolean hat = true;
+	boolean pants = true;
+	boolean weapon = true;
+	boolean tunic = true;
+
+	boolean PaperHat = false;
+	boolean PaperHatE = false;
+
+	boolean BunnyWand = false;
+	boolean BunnyWandE = false;
+
+	boolean MoonWalker = false;
+	boolean MoonWalkerE = false;
+
+	boolean RealStick = false;
+	boolean RealStickE = false;
+
+	boolean GutHeadband = false;
+	boolean GutHeadbandE = false;
+
+	boolean SherlockHat = false;
+	boolean SherlockHatE = false;
+
+	boolean NeedlePants = false;
+	boolean NeedlePantsE = false;
+
+	int x;
+	boolean ChickenDone = false;
+	public void Start() {
+		while (firstchoice == false) {
+			System.out.println("Were you born before (former) or after (subsequent) the 'great extinction' (subsequent hasnt been added yet so choose former)?");
+			System.out.println("1) before (former)");
+			System.out.println("2) after (subsequent)");
+			System.out.println("3) What's the 'great extinction'?");
+
+			answer = choice.next();
+			if (answer.equals("1")) {
+				System.out.println("You are a former race");
+				RealStick = true;
+				former = true;
+				firstchoice = true;
+			}
+			if (answer.equals("2")) {
+				System.out.println("You are a subsequent race");
+				subsequent = true;
+				firstchoice = true;
+			}
+			if (answer.equals("3")) {
+				System.out.println("The 'great extinction' was when all humans were wiped out, along with MOST of the big animals");
+				System.out.println("after that, the world got divided between the former, the creatures that were here before humans went extinct, the bunnies and rats and such");
+				System.out.println("and the subsequent, the magical creatures that appeared after the great war, the murloks, the hobbleheads and many more");
+				System.out.println();
+			}
+		}
+		if (former == true) {
+			while (secondchoice == false) {
+				System.out.println("What kind of creature are you?");
+				System.out.println("1) a rat");
+				System.out.println("2) a duck");
+				System.out.println("3) a squirrel");
+				System.out.println("4) well what are each of them like?");
+				answer = choice.next();
+				if (answer.equals("4")) {
+
+					System.out.println("Rats: rats have control over a big chunk of seagor, the main trade routes for all merchants, needless to say that they are influential.");
+					System.out.println("Rats have a keen sense of duty, often coming down as bores, there are some known though, who have braved the grandest adventures");
+					System.out.println("HP + 2 | +2 damage | +2 armor | +5 energy");
+					System.out.println("");
+					System.out.println("Ducks: if theres one thing that can be said about ducks its that they have mastered all biomes, from water to ground, even the air, they can be on it all.");
+					System.out.println("Ducks tend to master their inner mind, using it to cast spells, though theyre not too strong they have always acceled in the mental part of things");
+					System.out.println("HP + 2 | +2 Mdamage | +2 Marmor | +5 mana");
+					System.out.println("");
+					System.out.println("Squirrels: squirrels have never lived in big colonies, they like to stick to their trees, collect their nuts for winter, they live a simple life");
+					System.out.println("youll never catch a rude squirrel, they are always happy to have a visitor spend the night and trade tales with them");
+					System.out.println("Squirrels are good all rounders, they can adapt to the situation as needed or simply keep a more balanced skillset if thats what the situation needs too");
+					System.out.println("HP + 2, armor types, damage, and attack + 1 | mana & energy + 3");
+					System.out.println("_________________________________________________________________");
+				}
+				if (answer.equals("1")) {
+					System.out.println("You chose rat");
+					hp += 2;
+					damage +=2;
+					armor +=2;
+					energy+= 5;
+					mastery += 5;
+					secondchoice = true;
+					rat = true;
+				}
+				if (answer.equals("2")) {
+					System.out.println("You chose duck");
+					hp += 2;
+					Mdamage +=2;
+					Marmor +=2;
+					mana+= 5;
+					intel += 5;
+					secondchoice = true;
+					duck = true;
+				}
+
+				if(answer.equals("3")) {
+					System.out.println("You chose Squirrel");    
+					hp+=2;
+					damage+=1;
+					Mdamage += 1;
+					armor += 1;
+					Marmor +=1;
+					mana += 3;
+					energy += 3;
+					intel += 3;
+					mastery += 3;
+					intel += 2;
+					attack += 1;
+					secondchoice = true;
+					squirrel = true;
+				}
+			}
+		}
+		if (subsequent == true) {
+			while (secondchoice == false) {
+				System.out.println("What kind of creature are you?");
+				System.out.println("1) a murlok");
+				System.out.println("2) an imp");
+				System.out.println("3) a bristle");
+				System.out.println("4) well what are each of them like?");
+				answer = choice.next();
+				if (answer.equals("4")) {
+
+					System.out.println("Murlok: murloks have always tended to stick to the cruder weapons, bones and skulls and whatnot. they also are the only creature with their own language");
+					System.out.println("Though a murlok can learn magic, they have always tended to stick to the easy ways of doing things, mashing, bashing, and slashing");
+					System.out.println("HP + 2 | +2 damage | +2 armor | +5 energy");
+					System.out.println("");
+					System.out.println("Imps may seem cruel and sadistic, but once you get to know them you learn they're rather playfull, its just that their jokes can be a bit much at times");
+					System.out.println("since the beggining of their days, the imps have conjured fireballs and bunnies out of hats. It's only natural that they have quite the nack for it by now");
+					System.out.println("HP + 2 | +2 Mdamage | +2 Marmor | +5 mana");
+					System.out.println("");
+					System.out.println("Bristle: bristles are the shapeshifters of the world, able to turn into all kinds of stuff, they are usually timid folk, but you can always find one around... if you can that is");
+					System.out.println("A bristle can change into anything to make itself a bit stronger, or have a bit more magic, all within reasonable limits of itself of course");
+					System.out.println("HP + 2, armor types, damage, and attack + 1 | mana & energy + 3");
+					System.out.println("_________________________________________________________________");
+				}
+				if (answer.equals("1")) {
+					System.out.println("You chose murlok");
+					hp += 2;
+					damage +=2;
+					armor +=2;
+					energy+= 5;
+					mastery += 5;
+					secondchoice = true;
+					murlok = true;
+				}
+				if (answer.equals("2")) {
+					System.out.println("You chose imp");
+					hp += 2;
+					Mdamage +=2;
+					Marmor +=2;
+					mana+= 5;
+					intel += 5;
+					secondchoice = true;
+					imp = true;
+				}
+
+				if(answer.equals("3")) {
+					System.out.println("You chose Bristle");    
+					hp+=2;
+					damage+=1;
+					Mdamage += 1;
+					armor += 1;
+					Marmor +=1;
+					mana += 3;
+					intel += 3;
+					mastery += 3;
+					energy += 3;
+					intel += 3;
+					attack += 1;
+					secondchoice = true;
+					bristle = true;
+				}
+			}
+		}
+		System.out.println("Finally, you need to choose a name, just type 1 word in for your first name, and then another box will appear for your last name");
+		Fname = choice.next();
+		System.out.println("and now your last name");
+		Lname = choice.next();
+		while (thirdchoice == false) {
+			System.out.print("so your name is " + Fname + " " );
+			nickname();
+			System.out.println(Lname + "?");
+
+			System.out.println("1) Aye");
+			System.out.println("2) Oh oops, I messed up my first name");
+			System.out.println("3) Dang nabit, I misstyped my last name again");
+			System.out.println("4) wops i mistyped poth of them, I donnt kno how I mnage iths");
+			answer = choice.next();
+			if (answer.equals("1")) {
+				System.out.println("Well, then its time to start");
+				System.out.println("");
+				System.out.println("");
+				System.out.println("___________________________________________________________________________________________________________________________");
+				System.out.println("");
+				thirdchoice = true;
+			}
+			if (answer.equals("2")) {
+				System.out.println("ok well whats your actual first name then");
+				Fname = choice.next();
+			}
+			if (answer.equals("3")) {
+				System.out.println("of course, okay well, last name?");
+				Lname = choice.next();
+			}
+			if (answer.equals("4")) {
+				System.out.println("Thats alright, we all make mistakes, I wont hold you to it");
+				System.out.println("Okay, first name?");
+				Fname = choice.next();
+				System.out.println("and last name?");
+				Lname = choice.next();
+				misstype = true;
+				misstypeA = true;
+			}
+		}
+	}
+	/*STEPS FOR ADDING GEAR
+
+	 * 1st: add it to the currently equipped section
+	  if (XE == true) {
+	System.out.print("X | stats/abilities");
+	}
+	_________________________________________________________
+	 * 2nd: add it to the unequip section 
+	 if (XE == true) {
+				XE = false;
+				//(subtract the stats/remove the ability)
+			}
+	_________________________________________________________
+	 * 3rd: add it to the equip section, add it at the bottom of the correct category
+		if (X == true) {
+				System.out.println("X | stats/abilities");
+			}
+	_________________________________________________________
+	 *4th: add it to the second equip section add to top of correct category
+		if (X == true) {
+					System.out.println("#) X | stats/abilities");
+				}
+	_________________________________________________________
+	 *5th: add the equipping option
+	if (answer.equals("#")) {
+					System.out.println("You equip a X");
+					XE = true;
+					stats/abilities
+					category = false;
+					System.out.println("");
+				}
+	 */
+	public void loot() {
+		room = true;
+		while (room == true) {
+			System.out.println("Are you looking to equip or unequip?");
+			System.out.println("1) Unequip");
+			System.out.println("2) Equip");
+			System.out.println("3) Stats");
+			System.out.println("4) Leave");
+			answer = choice.next();
+			if (answer.equals("3")) {
+				stats();
+			}
+			if (answer.equals("4")) {
+				Uoption = true;
+			}
+			if (answer.equals("1")) {
+				System.out.println("Heres what you have equiped");
+				System.out.print("Hat: ");
+				if (GutHeadbandE == true) {
+					System.out.println("GutHeadband | 3 energy | Bloody Headbutt (normal dmg, 35% chance to blind/stun)");
+				}
+				if (PaperHatE == true) {
+					System.out.print("PaperHat | 2 mana: add 30% more damage to your next attack");
+					}
+				if (SherlockHatE == true) {
+					System.out.print("SherlockHat | See enemy stats");
+				}
+				if (hat == true) {
+					System.out.println("None");
+				}
+				System.out.print("Tunic: ");
+				if (MoonWalkerE == true) {
+					System.out.print("MoonWalker | +2 Mana");
+				}
+				if (tunic == true) {
+					System.out.println("None");
+				}
+				System.out.print("Pants: ");
+				if (NeedlePantsE == true) {
+					System.out.print("NeedlePants | +1 armor, +2 Marmor");
+				}
+				if (pants == true) {
+					System.out.println("None");
+				}
+				System.out.print("Weapon: ");
+				if (RealStickE == true) {
+					System.out.println("RealStick | +1 damage, +1 Mdamage");
+				}
+				if (BunnyWandE == true) {
+					System.out.print("BunnyWand | +2 attack");
+				}
+				if (weapon == true) {
+					System.out.println("None");
+				}
+
+
+				while (Uoption == false) {
+					System.out.println("");
+					System.out.println("What would you like to unequip?");
+					System.out.println("1) Hat");
+					System.out.println("2) Tunic");
+					System.out.println("3) Pants");
+					System.out.println("4) Weapon");
+					System.out.println("5) Thats all");
+					answer = choice.next();
+					if (answer.equals("1")) {
+						System.out.println("You hang up your hat");
+						hat = true;
+						if (GutHeadbandE == true) {
+							GutHeadbandE = false;
+							BloodyHeadbutt = false;
+						}
+						if (PaperHatE == true) {
+							PaperHatE = false;
+						}
+						if (SherlockHatE == true) {
+							SherlockHatE = false;
+							StudyE = false;
+						}
+					}
+					if (answer.equals("2")) {
+						System.out.println("You remove your tunic");
+						tunic = true;
+						if (MoonWalkerE == true) {
+							MoonWalkerE = false;
+							mana = mana - 2;
+						}
+					}
+					if (answer.equals("3")) {
+						System.out.println("You take off your pants");
+						pants = true;
+						if (NeedlePantsE == true) {
+							NeedlePantsE = false;
+							armor -= 1;
+							Marmor -= 2;
+						}
+					}
+					if (answer.equals("4")) {
+						System.out.println("You stash your weapon");
+						weapon = true;
+						if (RealStickE == true) {
+							RealStickE = false;
+							damage --;
+							Mdamage --;
+						}
+						if (BunnyWandE == true) {
+							BunnyWandE = false;
+							attack -= 2;
+						}
+					}
+					if (answer.equals("5")) {
+						Uoption = true;
+					}
+				}
+			}
+			if (answer.equals("2")) {
+				while (Uoption == false) {
+					System.out.println("what would you like to equip? heres your items");
+					if (hat == true) {
+						System.out.println("1) Hats");
+						if (GutHeadband == true) {
+							System.out.println("GutHeadband | 3 energy | Bloody Headbutt (normal dmg, 35% chance to blind/stun)");
+						}
+						if (SherlockHat == true) {
+							System.out.println("SherlockHat | See enemy stats");
+						}
+						if (PaperHat == true) {
+							System.out.println("PaperHat | 2 mana: add 30% to your next attack");
+						}
+						System.out.println("");
+					}
+					if (hat == false) {
+						System.out.println("1) You already have a hat equiped");
+						System.out.println("");
+					}
+					if (tunic == true) {
+						System.out.println("2) Tunics");
+						if (MoonWalker == true) {
+							System.out.println("MoonWalker shirt | Mana +2");
+						}
+						System.out.println("");
+					}
+					if (tunic == false) {
+						System.out.println("2) You already have on a tunic");
+						System.out.println("");
+					}
+					if (pants == true) {
+						System.out.println("3) Pants");
+						if (NeedlePants == true) {
+							System.out.println("NeedlePants | +1 armor, +2 Marmor");
+						}
+						System.out.println("");
+					}
+					if (pants == false) {
+						System.out.println("3) You already have on pants");
+						System.out.println("");
+					}
+					if (weapon == true) {
+						System.out.println("4) Weapons");
+						if (RealStick == true) {
+							System.out.println("RealStick | +1 damage, +1 Mdamage");
+						}
+						if (BunnyWand == true) {
+							System.out.println("BunnyWand | +2 attack");
+						}
+						System.out.println("");
+					}
+					if (weapon == false) {
+						System.out.println("4) You already have a weapon equiped");
+						System.out.println("");
+					}
+					System.out.println("5) exit");
+					answer = choice.next();
+
+					if (answer.equals("1") && hat == false) {
+						System.out.println("You already have on a hat");
+					}
+					if (answer.equals("1") && hat == true) {
+						System.out.println("What hat would you like to equip?");
+						System.out.println("0) none");
+						if (GutHeadband == true) {
+							System.out.println("1) GutHeadband | 3 energy | Bloody Headbutt (normal dmg, 35% chance to blind/stun)");
+						}
+						if (SherlockHat == true) {
+							System.out.println("2) SherlockHat | See enemy stats");
+						}
+						if (PaperHat == true) {
+							System.out.println("3) PaperHat | 2 mana: add 30% to your next attack");
+						}
+						answer = choice.next();
+						if (answer.equals("0")) {
+							Uoption = true;
+						}
+						if (answer.equals("1")) {
+							System.out.println("You equip a GutHeadband");
+							GutHeadbandE = true;
+							BloodyHeadbutt = true;
+							hat = false;
+							System.out.println("");
+						}
+						if (answer.equals("2")) {
+							System.out.println("You equip a SherlockHat");
+							SherlockHatE = true;
+							StudyE = true;
+							hat = false;
+							System.out.println("");
+						}
+						if (answer.equals("3")) {
+							System.out.println("You equip a PaperHat");
+							PaperHatE = true;
+							
+							hat = false;
+							System.out.println("");
+						}
+						answer = "90";
+					}
+					if (answer.equals("2") && tunic == false) {
+						System.out.println("You already have on a tunic");
+					}
+					if (answer.equals("2") && tunic == true) {
+						System.out.println("What tunic would you like to put on?");
+						System.out.println("0) none");
+						if (MoonWalker == true) {
+							System.out.println("1) MoonWalker | +2 Mana");
+						}
+
+						answer = choice.next();
+
+						if (answer.equals("1")) {
+							System.out.println("You equip a MoonWalker");
+							MoonWalkerE = true;
+							mana += 2;
+							tunic = false;
+							System.out.println("");
+						}
+						answer = "90";
+					}
+					if (answer.equals("3") && pants == false) {
+						System.out.println("You already have on pants");
+					}
+					if (answer.equals("3") && pants == true) {
+						System.out.println("What pants do you want?");
+						System.out.println("0) none");
+						if (NeedlePants == true) {
+							System.out.println("1) Needlepants | +1 armor, +2 Marmor");
+						}
+						answer = choice.next();
+						if (answer.equals("0")) {
+							Uoption = true;
+						}
+
+						if (answer.equals("1")) {
+							System.out.println("You equip a NeedlePants");
+							NeedlePantsE = true;
+							armor += 1;
+							Marmor += 2;
+							pants = false;
+							System.out.println("");
+						}
+						answer = "90";
+					}
+
+
+					if (answer.equals("4") && weapon == false) {
+						System.out.println("You already have a weapon");
+					}
+					if (answer.equals("4") && weapon == true) {
+						System.out.println("What weapon would you like?");
+						System.out.println("0) none");
+						if (RealStick == true) {
+							System.out.println("1) RealStick | +1 damage, +1 Mdamage");
+						}
+						if (BunnyWand == true) {
+							System.out.println("2) BunnyWand | +2 attack");
+						}
+						answer = choice.next();
+
+
+
+						if (answer.equals("0")) {
+							Uoption = true;
+						}
+						if (answer.equals("1")) {
+							System.out.println("You equip a RealStick");
+							RealStickE = true;
+							damage ++;
+							Mdamage ++;
+							weapon = false;
+							System.out.println("");
+						}
+						if (answer.equals("2")) {
+							System.out.println("You equip a BunnyWand");
+							BunnyWandE = true;
+							attack += 2;
+							weapon = false;
+							System.out.println("");
+						}
+						answer = "90";
+					}
+
+					if (answer.equals("5")) {
+						Uoption = true;
+					}
+				}
+			}
+			if (Uoption == true) {
+				System.out.println("are you done meandering about your room??");
+				System.out.println("1) yes");
+				System.out.println("2) no");
+				answer = choice.next();
+				if (answer.equals("1")) {
+					room = false;
+					Uoption = false;
+				}
+				if (answer.equals("2")) {
+					room = true;
+					Uoption = false;
+				}
+			}
+
+
+		}
+	}
+	public void lvl() {
+		double LevelUp = (int)(Math.random()* 7);
+		if (LevelUp == 0) {
+			System.out.println("You discover a hidden page in the book");
+		}
+		if (LevelUp == 1) {
+			System.out.println("You remember what a certain vital word means");
+		}
+		if (LevelUp == 2) {
+			System.out.println("You read all the text of a page, even the parenthesis");
+		}
+		if (LevelUp == 3) {
+			System.out.println("You read a spinoff of the original book");
+		}
+		if (LevelUp == 4 ) {
+			System.out.println("You read the 'notes from author'");
+		}
+		if (LevelUp == 5) {
+			System.out.println("You turn the book upside down to get a new perspective on things");
+		}
+		if (LevelUp == 6) {
+			System.out.println("You quickly scan through the whole book");
+		}
+		System.out.println("Choose 3 skills to level up (you can only put 2 skills into one stat");
+		System.out.println("Heres your stats.");
+		stats();
+		System.out.println("---------------------------");
+		System.out.println("Choice 1");
+		System.out.println("1) hp");
+		System.out.println("2) damage");
+		System.out.println("3) Mdamage");
+		System.out.println("4) armor");
+		System.out.println("5) Marmor");
+		System.out.println("6) energy");
+		System.out.println("7) mana");
+		System.out.println("8) attack");
+		levelchoice = false;
+		while (levelchoice == false) {
+			answer = choice.next();
+			if (answer.equals("1")) {
+				hp += 1;
+				hpC1 = true;
+				levelchoice = true;
+			}
+			if (answer.equals("2")) {
+				damage += 1;
+				damageC1 = true;
+				levelchoice = true;
+			}
+			if (answer.equals("3")) {
+				Mdamage += 1;
+				MdamageC1 = true;
+				levelchoice = true;
+			}
+			if (answer.equals("4")) {
+				armor += 1;
+				armorC1 = true;
+				levelchoice = true;
+			}
+			if (answer.equals("5")) {
+				Marmor += 1;
+				MarmorC1 = true;
+				levelchoice = true;
+			}
+			if (answer.equals("6")) {
+				energy += 1;
+				energyC1 = true;
+				levelchoice = true;
+			}
+			if (answer.equals("7")) {
+				mana += 1;
+				manaC1 = true;
+				levelchoice = true;
+			}
+			if (answer.equals("8")) {
+				attack += 1;
+				attackC1 = true;
+				levelchoice = true;
+			}
+		}
+		System.out.println("now your second choice");
+		levelchoice = false;
+		while (levelchoice == false) {
+			answer = choice.next();
+			if (answer.equals("1")) {
+				hp += 1;
+				hpC2 = true;
+				levelchoice = true;
+			}
+			if (answer.equals("2")) {
+				damage += 1;
+				damageC2 = true;
+				levelchoice = true;
+			}
+			if (answer.equals("3")) {
+				Mdamage += 1;
+				MdamageC2 = true;
+				levelchoice = true;
+			}
+			if (answer.equals("4")) {
+				armor += 1;
+				armorC2 = true;
+				levelchoice = true;
+			}
+			if (answer.equals("5")) {
+				Marmor += 1;
+				MarmorC2 = true;
+				levelchoice = true;
+			}
+			if (answer.equals("6")) {
+				energy += 1;
+				energyC2 = true;
+				levelchoice = true;
+			}
+			if (answer.equals("7")) {
+				mana += 1;
+				manaC2 = true;
+				levelchoice = true;
+			}
+			if (answer.equals("8")) {
+				attack += 1;
+				attackC2 = true;
+				levelchoice = true;
+			}
+		}
+		/*
+		 * 	if (answer.equals("Y") && MdamageC1 == false && MdamageC3 == false) {
+				Mdamage += 1;
+				boolean MdamageC3 = true;
+				levelchoice = true;
+			}
+			if (answer.equals("Y") && MdamageC2 == false && MdamageC3 == false){
+				Mdamage += 1;
+				boolean MdamagepC3 = true;
+				levelchoice = true;
+			}
+		 */
+		levelchoice = false;
+		System.out.println("and finally, your third choice");
+		while (levelchoice == false) {
+			answer = choice.next();
+			if (answer.equals("1") && hpC1 == true && hpC2 == true) {
+				System.out.println("What did i tell you? Rechoose");
+				answer = "9";
+			}
+
+			if (answer.equals("2") && damageC1 == true && damageC2 == true) {
+				System.out.println("What did i tell you? Rechoose");
+				answer = "9";
+			}
+
+			if (answer.equals("3") && MdamageC1 == true && MdamageC2 == true) {
+				System.out.println("What did i tell you? Rechoose");
+				answer = "9";
+			}
+
+			if (answer.equals("4") && armorC1 == true && armorC2 == true) {
+				System.out.println("What did i tell you? rechoose");
+				answer = "9";
+			}
+
+			if (answer.equals("5") && MarmorC1 == true && MarmorC2 == true) {
+				System.out.println("What did i tell you? rechoose");
+				answer = "9";
+			}
+
+			if (answer.equals("6") && energyC1 == true && energyC2 == true) {
+				System.out.println("What did i tell you? Rechoose");
+				answer = "9";
+			}
+
+			if (answer.equals("7") && manaC1 == true && manaC2 == true) {
+				System.out.println("What did i tell you? Rechoose");
+				answer = "9";
+			}
+			if (answer.equals("8") && attackC1 == true && attackC2 == true) {
+				System.out.println("What did i tell you? Rechoose");
+				answer = "9";
+			}
+
+
+			if (answer.equals("1")) {
+				hp += 1;
+				hpC3 = true;
+				levelchoice = true;
+			}
+
+			if (answer.equals("2")) {
+				damage += 1;
+				damageC3 = true;
+				levelchoice = true;
+			}
+
+			if (answer.equals("3")) {
+				Mdamage += 1;
+				MdamageC3 = true;
+				levelchoice = true;
+			}
+
+			if (answer.equals("4")) {
+				armor += 1;
+				armorC3 = true;
+				levelchoice = true;
+			}
+
+			if (answer.equals("5")) {
+				Marmor += 1;
+				MarmorC3 = true;
+				levelchoice = true;
+			}
+
+			if (answer.equals("6")) {
+				energy += 1;
+				energyC3 = true;
+				levelchoice = true;
+			}
+
+			if (answer.equals("7")) {
+				mana += 1;
+				manaC3 = true;
+				levelchoice = true;
+			}
+			if (answer.equals("8")) {
+				attack += 1;
+				attackC3 = true;
+				levelchoice = true;
+			}
+		}
+		hpC1 = false;
+		damageC1 = false;
+		MdamageC1 = false;
+		armorC1 = false;
+		MarmorC1 = false;
+		energyC1 = false;
+		manaC1 = false;
+		attackC1 = false;
+
+		hpC2 = false;
+		damageC2 = false;
+		MdamageC2 = false;
+		armorC2 = false;
+		MarmorC2 = false;
+		energyC2 = false;
+		manaC2 = false;
+		attackC2 = false;
+
+		hpC3 = false;
+		damageC3 = false;
+		MdamageC3 = false;
+		armorC3 = false;
+		MarmorC3 = false;
+		energyC3 = false;
+		manaC3 = false;
+		attackC3 = false;
+
+		xpR = xpR - xp;
+		xp = xp + 15;
+		level += 1;
+
+		if (level == ManaUnlock) {
+			System.out.println("You unlocked a new spell");
+			ManaUnlock += 4;
+			ManaCounter += 1;
+			if (ManaCounter == 1) {
+				System.out.println("You unlocked healing, a move that you use on yourself that does not end the turn | 3 mana for 3 healing");
+				heal = true;
+			}
+		}
+		if (level == EnergyUnlock) {
+			System.out.println("You unlocked a new ability");
+			EnergyUnlock += 4;
+			EnergyCounter += 1;
+			if (EnergyCounter == 1) {
+				System.out.println("You unlocked slam, a move that deals 65% of a normal hit to all enemies | 4 energy");
+				slam = true;
+			}
+		}
+	}
+	public void stats() {
+
+		System.out.println("Health is: " + hp);
+		System.out.println("Damage is: " + damage);
+		System.out.println("Magical Damage is: " + Mdamage);
+		System.out.println("Armor is: " + armor);
+		System.out.println("Magical Armor is: " + Marmor);
+		System.out.println("Energy is: " + energy);
+		System.out.println("Mana is: " + mana);
+		System.out.println("Attack is: " + attack);
+	}
+	public void statistics() {
+		if (xpR >= xp) {
+			lvl();
+		}
+		if (level == ManaUnlock) {
+
+			ManaCounter += 1;
+		}
+		if (level == EnergyUnlock) {
+
+			EnergyCounter += 1;
+		}
+		StatsOption = true;
+		while (StatsOption == true) {
+			System.out.println("What would you like to do?");
+			System.out.println("1) view stats");
+			System.out.println("2) view ability unlock section");
+			System.out.println("3) view perks");
+			System.out.println("4) change nickname");
+			System.out.println("5) Exit");
+			answer = choice.next();
+			if (answer.equals("1")) {
+				stats();
+			}
+			if (answer.equals("2")) {
+				System.out.println("Next mana ability comes at level " + ManaUnlock);
+				System.out.println("Next energy ability comes at level " + EnergyUnlock);
+			}
+			if (answer.equals("3")) {
+				if (saturated == true){
+					System.out.println("Saturated: But you still have a bit of room just incase you come across some free Shire | +1 mana");
+				}
+				if (dweeb == true) {
+					System.out.println("Dweeb: you know what you did, and you know you deserve this 'perk' | +1 Magical damage");
+				}
+				if (hardcore == true) {
+					System.out.println("Hardcore: honestly, not worth it. | +1 damage");
+				}
+				if (drunk == true) {
+					System.out.println("Drunk: You're drunk. | +1 hp");
+				}
+				if (lost == true) {
+					System.out.println("Lost to a chicken: Shoulda been more savage | +1 Magical damage");
+				}
+				if (cocky == true){
+					System.out.println("Cocky: When the narrator tells you not to do something, its probably best not to do it. | -1 energy");
+				}
+				if (savage == true) {
+					System.out.println("Savage: Some more dialogue option will be open");
+				}
+			}
+			if (answer.equals("4")) {
+				if (misstype == false && DebbieDowner == false && nerd == false && mooreaucracy == false) {
+					System.out.println("0) You don't have any nicknames yet, just say 0");
+				}
+				if (misstype == true) {
+					System.out.println("1) 'Misstype'");
+				}
+				if (DebbieDowner == true) {
+					System.out.println("2) 'DebbieDowner'");
+				}
+				if (nerd == true) {
+					System.out.println("3) 'The Nerd'");
+				}
+				if (mooreaucracy == true){
+					System.out.println("4) 'The Mooreaucrat'");
+				}
+				if (Rebel == true) {
+					System.out.println("three) The rebel");
+				}
+				answer = choice.next();
+				if (answer.equals("1") && misstype == true) {
+					System.out.println("Nickname set to 'Misstype'");
+					misstypeA = true;
+					DebbieDownerA = false;
+					nerdA = false;
+					mooreaucracyA = false;
+					RebelA = false;
+				}
+				if (answer.equals("2") && DebbieDowner == true) {
+					System.out.println("Nickname set to 'DebbieDowner'");
+					misstypeA = false;
+					DebbieDownerA = true;
+					nerdA = false;
+					mooreaucracyA = false;
+					RebelA = false;
+				}
+				if (answer.equals("3") && nerd == true) {
+					System.out.println("'Nickname set to 'The nerd'");
+					misstypeA = false;
+					DebbieDownerA = false;
+					nerdA = true;
+					mooreaucracyA = false;
+					RebelA = false;
+				}
+				if (answer.equals("4") && mooreaucracy == true){
+					System.out.println("Nickname set to 'The Mooreaucrat'");
+					misstypeA = false;
+					DebbieDownerA = false;
+					nerdA = false;
+					mooreaucracyA = true;
+					RebelA = false;
+				}
+				if (answer.equals("three")){
+					System.out.println("Nickname set to The Rebel");
+					RebelA = true;
+					misstypeA = false;
+					DebbieDownerA = false;
+					nerdA = false;
+					mooreaucracyA = false;
+					
+				}
+				answer = "90";
+			}
+			if (answer.equals("5")) {
+				StatsOption = false;
+				System.out.println("You close your book");
+			}
+		}
+		StatsOption = true;
+		answer = "90";
+	}
+	public void nickname() {
+		if (misstypeA == true) {
+			System.out.print("'Misstype' ");
+		}
+		if (DebbieDownerA == true) {
+			System.out.print("'DebbieDowner' ");
+		}
+		if (nerdA == true) {
+			System.out.print("'The Nerd'");
+		}
+		if (mooreaucracyA == true){
+			System.out.print("'The Mooreaucrat'");
+		}
+		if (RebelA == true) {
+			System.out.println("The Rebel");
+		}
+	}
+	public void follower() {
+		if (Granny == true) {
+			System.out.print(" Granny ");
+		}
+		if (Emerald == true) {
+			System.out.print(" Emerald ");
+		}
+		if (Oogway == true) {
+			System.out.print(" Master Oogway ");
+		}
+	}
+	public void intro() {
+		System.out.println("Hey you, before you start a little note that may save you a lot of hard work, if the words go off screen for you, turn on text wrap, it will save a lot of hard work!");
+		System.out.println("");
+		System.out.println("Oh, hello there, welcome to this game. I can see you're new here, so im going to tell you how to play, it's kind of hard but I think you can do it, I believe in you. What you have to do is type the number that coresponds to the choice you want to choose, thats all, thats actually all there is to it, so dont overcomplicate this and type something like 'ok' just press 1 or 2, thats all, here, try.");
+		System.out.println("1) Like this?");
+		System.out.println("2) Look, I'm doing it!");
+		answer = choice.next();
+		if (answer.equals("1") || answer.equals("2")) {
+			System.out.println("You did it! alright, thats all there was to it, now then, enjoy...");
+			System.out.println("");
+		}else {
+			x = 0;
+			try {
+				int list = 0/x;
+				System.out.println(list);
+			} catch (Exception p){
+			p.printStackTrace();
+			p.printStackTrace();
+			p.printStackTrace();
+			p.printStackTrace();
+			System.out.println("Aww crap, look what you did, just, look try not to press anything, I don't know, here, you can have a nickname or something cause you probably think you found a secret idk");
+			System.out.println("Nickname earned: 'The Rebel'");
+				Rebel = true;
+			}
+			
+		}
+	}
+}

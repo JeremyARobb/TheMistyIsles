@@ -1,0 +1,46 @@
+package TheMistyIsles;
+import java.util.Scanner;
+public class Zones extends FormerZone1Events{
+
+	public void former () {
+		if (former == true) {
+
+			System.out.print("You arrive at a small town called Bramble, a nice village nestled in a valley surrounded by mountains that reach so high you can see a bit of snow on top, in the morning the dew sticks on the tall blades of grass, and at night there's thousands fireflies that seem to light up the mountains, some say that if you follow the ones tinted with blue they will lead you to the heart of the Misty Isles");
+			System.out.println(". You arrive late at night and buy a room at the inn; however you decide to sleep on a chair by the inns fire, when you wake up you eat some breakfast, and drink just a wee bit of shire. After that you decide to set out.");
+			while (option == false) {
+				System.out.println("1) Talk to some folks, ask if they need help with anything");
+				System.out.println("2) Enter the pub");
+				System.out.println("3) check out your 'How to Play a Rpg Game' book (level up/view stats)");
+				System.out.println("4) Go back to where you're staying (view loot | Equip/Unequip/view stats)");
+				if (BanditCoop == true) {
+					System.out.println("5) Go out and explore");
+				}
+				if (MagicP1 == true && MagicP2 == true && MagicP3 == true) {
+					System.out.println("6) Bring the staff to the moorno (will trigger last scene, so level up if you can and put on armor and such)");
+				}
+				answer = choice.next();
+				if (answer.equals("1")) {
+					quests1();
+				}
+				if (answer.equals("2")) {
+					pub();
+				}
+				if (answer.equals("3")) {
+					statistics();
+				}
+				if (answer.equals("4")) {
+					loot();
+				}
+				if (answer.equals("5") && BanditCoop == true) {
+					exploreF1();
+				}
+				if (answer.equals("6") && MagicP1 == true && MagicP2 == true && MagicP3 == true) {
+					ending();
+				}
+			}
+		}
+		if (subsequent == true) {
+			
+		}
+	}
+}

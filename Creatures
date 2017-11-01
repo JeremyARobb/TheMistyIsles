@@ -1,0 +1,1029 @@
+package TheMistyIsles;
+//knarl
+//whelp
+//goblin
+//hoblehead
+//hellhound
+
+
+public class Creatures extends Events {
+
+	/*
+	 * if (answer.equals("#") && mana|energy >= Q) {
+						if (armorE# >= damage) {
+							finalhit = attack/2 + 1;
+						}
+						if (Bolster == true) {
+							finalhit = finalhit * 13;
+							finalhit = finalhit / 10;
+						}
+						energyleft/manaleft = energyleft/manaleft - Q;
+						System.out.println("You hit the enemy for " + finalhit + " damage");
+						hpE1 = hpE1 - finalhit;
+						if (hpE1 <= 0) {
+							System.out.println("The " + C# + " faints");
+							Cr# = false;
+						}
+						finalhit = attack;
+						double XC = Math.random();
+						XChance = XC * 100;
+						XFinal = (int)XChance + 1;
+						if (XFinal <= #) {
+							System.out.println("worked");
+						}
+						if (XFinal > 35) {
+							System.out.println("didnt work");
+						}
+						finalhit = attack;
+						Turn = false;
+					}
+	 */
+	public void fight(int amount, String C1, String C2, String C3, int level, int exp) {
+		win = false;
+		energyleft = energy;
+		level += 1;
+		manaleft = mana;
+		hpleft = hp;
+		if (Ally == true) {
+			if (Oogway == true) {
+				OogwayU = true;
+				int range = ((level + 1) - level) + 1;
+				hpA = (int)(Math.random() * range) + level + 2;
+				damageA = (int)(Math.random() * range) + level;
+				MdamageA = (int)(Math.random() * range) + level;
+				armorA = (int)(Math.random() * range) + level ;
+				MarmorA = (int)(Math.random() * range) + level ;
+				attackA = (int)(Math.random() * range) + level;
+				if (attackA <= 0) {
+					attackA = 1;
+				}
+			}
+			if (Emerald == true) {
+				EmeraldU = true;
+				int range = ((level + 1) - level) + 1;
+				hpA = (int)(Math.random() * range) + level + 2;
+				damageA = (int)(Math.random() * range) + level;
+				MdamageA = (int)(Math.random() * range) + level;
+				armorA = (int)(Math.random() * range) + level ;
+				MarmorA = (int)(Math.random() * range) + level ;
+				attackA = (int)(Math.random() * range) + level;
+				if (attackA <= 0) {
+					attackA = 1;
+				}
+			}
+			if (Granny == true) {
+				GrannyU = true;
+				int range = ((level + 1) - level) + 1;
+				hpA = (int)(Math.random() * range) + level + 2;
+				damageA = (int)(Math.random() * range) + level;
+				MdamageA = (int)(Math.random() * range) + level;
+				armorA = (int)(Math.random() * range) + level ;
+				MarmorA = (int)(Math.random() * range) + level ;
+				attackA = (int)(Math.random() * range) + level;
+				if (attackA <= 0) {
+					attackA = 1;
+				}
+			}
+			
+		}
+		if (amount == 1) {	//max		//min
+			Cr1 = true;
+			int range = ((level + 2) - level) + 1;     
+			hpE1 = (int)(Math.random() * range) + level + 4;
+			damageE1 = (int)(Math.random() * range) + level;
+			MdamageE1 = (int)(Math.random() * range) + level;
+			armorE1 = (int)(Math.random() * range) + level ;
+			MarmorE1 = (int)(Math.random() * range) + level ;
+			energyE1 = (int)(Math.random() * range) + level ;
+			manaE1 = (int)(Math.random() * range) + level ;
+			attackE1 = (int)(Math.random() * range) + level;
+			if (attackE1 <= 0) {
+				attackE1 = 1;
+			}
+		}
+		if (amount == 2) {
+			Cr1 = true;
+			Cr2 = true;
+			int range = ((level + 2) - level) + 1;     
+			hpE1 = (int)(Math.random() * range) + level + 3;
+			damageE1 = (int)(Math.random() * range) + level;
+			MdamageE1 = (int)(Math.random() * range) + level;
+			armorE1 = (int)(Math.random() * range) + level ;
+			MarmorE1 = (int)(Math.random() * range) + level ;
+			energyE1 = (int)(Math.random() * range) + level ;
+			manaE1 = (int)(Math.random() * range) + level ;
+			attackE1 = (int)(Math.random() * range) + level;
+			if (attackE1 <= 0) {
+				attackE1 = 1;
+			}
+
+			hpE2 = (int)(Math.random() * range) + level + 3;
+			damageE2 = (int)(Math.random() * range) + level;
+			MdamageE2 = (int)(Math.random() * range) + level;
+			armorE2 = (int)(Math.random() * range) + level ;
+			MarmorE2 = (int)(Math.random() * range) + level ;
+			energyE2 = (int)(Math.random() * range) + level ;
+			manaE2 = (int)(Math.random() * range) + level ;
+			attackE2 = (int)(Math.random() * range) + level;
+			if (attackE2 <= 0) {
+				attackE2 = 1;
+			}
+		}
+		if (amount == 3) {
+			Cr1 = true;
+			Cr2 = true;
+			Cr3 = true;
+			int range = ((level + 2) - level) + 1;     
+			hpE1 = (int)(Math.random() * range) + level + 3;
+			damageE1 = (int)(Math.random() * range) + level;
+			MdamageE1 = (int)(Math.random() * range) + level;
+			armorE1 = (int)(Math.random() * range) + level ;
+			MarmorE1 = (int)(Math.random() * range) + level ;
+			energyE1 = (int)(Math.random() * range) + level ;
+			manaE1 = (int)(Math.random() * range) + level ;
+			attackE1 = (int)(Math.random() * range) + level - 2;
+			if (attackE1 <= 0) {
+				attackE1 = 1;
+			}
+
+			hpE2 = (int)(Math.random() * range) + level + 3;
+			damageE2 = (int)(Math.random() * range) + level;
+			MdamageE2 = (int)(Math.random() * range) + level;
+			armorE2 = (int)(Math.random() * range) + level ;
+			MarmorE2 = (int)(Math.random() * range) + level ;
+			energyE2 = (int)(Math.random() * range) + level ;
+			manaE2 = (int)(Math.random() * range) + level ;
+			attackE2 = (int)(Math.random() * range) + level;
+			if (attackE2 <= 0) {
+				attackE2 = 1;
+			}
+
+			hpE3 = (int)(Math.random() * range) + level + 3;
+			damageE3 = (int)(Math.random() * range) + level;
+			MdamageE3 = (int)(Math.random() * range) + level;
+			armorE3 = (int)(Math.random() * range) + level ;
+			MarmorE3 = (int)(Math.random() * range) + level ;
+			energyE3 = (int)(Math.random() * range) + level ;
+			manaE3 = (int)(Math.random() * range) + level ;
+			attackE3 = (int)(Math.random() * range) + level;
+			if (attackE3 <= 0) {
+				attackE3 = 1;
+			}
+		}
+		finalhitE1 = attackE1;
+		finalhitE2 = attackE2;
+		finalhitE3 = attackE3;
+		if (Cr1 == true) {
+			double Intro = (int)(Math.random()* 7);
+			if (Intro == 1) {
+				System.out.println("A " + C1 + " appears");
+			}
+			if (Intro == 0) {
+				System.out.println("A " + C1 + " Sharpens their blade");
+			}
+			if (Intro == 2) {
+				System.out.println("Oh look, it's a crazy eyed " + C1);
+			}
+			if (Intro == 3) {
+				System.out.println("A " + C1 + " is ready to fight");
+			}
+			if (Intro == 4) {
+				System.out.println("The " + C1 + " stares you down");
+			}
+			if (Intro == 5) {
+				System.out.println("You hear the " + C1 + " growl slightly");
+			}
+			if (Intro == 6) {
+				System.out.println("The " + C1 + " is freaking out, you dont know if thats good or bad");
+			}
+		}
+		if (Cr2 == true) {
+			double Intro = (int)(Math.random()* 7);
+			if (Intro == 1) {
+				System.out.println("A " + C2 + " appears");
+			}
+			if (Intro == 0) {
+				System.out.println("A " + C2 + " Sharpens their blade");
+			}
+			if (Intro == 2) {
+				System.out.println("Oh look, its a crazy eyed " + C2);
+			}
+			if (Intro == 3) {
+				System.out.println("A " + C2 + " is ready to fight");
+			}
+			if (Intro == 4) {
+				System.out.println("The " + C2 + " stares you down");
+			}
+			if (Intro == 5) {
+				System.out.println("You hear the " + C2 + " growl slightly");
+			}
+			if (Intro == 6) {
+				System.out.println("The " + C2 + " is freaking out, you dont know if thats good or bad");
+			}
+		}
+		if (Cr3 == true) {
+			double Intro = (int)(Math.random()* 7);
+			if (Intro == 1) {
+				System.out.println("A " + C3 + " appears");
+			}
+			if (Intro == 0) {
+				System.out.println("A " + C3 + " Sharpens their blade");
+			}
+			if (Intro == 2) {
+				System.out.println("Oh look, its a crazy eyed " + C3);
+			}
+			if (Intro == 3) {
+				System.out.println("A " + C3 + " is ready to fight");
+			}
+			if (Intro == 4) {
+				System.out.println("The " + C3 + " stares you down");
+			}
+			if (Intro == 5) {
+				System.out.println("You hear the " + C3 + " growl slightly");
+			}
+			if (Intro == 6) {
+				System.out.println("The " + C3 + " is freaking out, you dont know if thats good or bad");
+			}
+		}
+		while (Battle == true) {
+			while (Turn == true) {
+				System.out.println("What do you want to do?");
+
+				System.out.println("1) A move to myself (does not end turn)");
+				if (Cr1 == true) {
+					System.out.println("2) attack " + C1);
+				}
+				if (Cr2 == true) {
+					System.out.println("3) attack " + C2);
+				}
+				if (Cr3 == true) {
+					System.out.println("4) attack " + C3);
+				}
+				if (StudyE == false) {
+					System.out.println("5) view your stats (does not end turn)");
+				}
+				if (StudyE == true) {
+					System.out.println("5) view your stats and your enemies stats (does not end turn)");
+				}
+				answer = choice.next();
+				if (answer.equals("1")) {
+					System.out.println("");
+					System.out.println("1) exit");
+					if (heal == true) {
+						System.out.println("2) heal | 3 mana for 3 heal");
+					}
+					if (PaperHatE == true && Bolster == false) {
+						System.out.println("3) Bolster | 2 mana for +30% attack");
+					}
+					answer = choice.next();
+					if (answer.equals("1")) {
+						answer = "90";
+					}
+					if (answer.equals("2") && heal == true && manaleft >= 3) {
+						System.out.println("You heal for 3");
+						hpleft += 3;
+						if (hpleft > hp) {
+							hpleft = hp;
+						}
+						manaleft -= 3;
+					}
+					if (answer.equals("3") && PaperHatE == true && manaleft >= 2 && Bolster == false) {
+						System.out.println("You add 30% damage to your next attack");
+						Bolster = true;
+						mana -= 2;
+					}
+					answer = "90";
+				}
+				if (answer.equals("2") && Cr1 == true) {
+
+					System.out.println("What move do you want to use?");
+					System.out.println("1) Normal attack");
+					System.out.println("2) Magic attack");
+					System.out.println("3) Ability");
+					System.out.println("4) exit");
+					answer = choice.next();
+					if (answer.equals("4")) {
+						answer = "90";
+					}
+					if (answer.equals("1")) {
+						finalhit = attack;
+						if (armorE1 >= damage) {
+							finalhit = attack/2 + 1;
+						}	
+						if (Bolster == true) {
+							finalhit = finalhit * 13;
+							finalhit = finalhit / 10;
+						}
+						System.out.println("You hit the enemy for " + finalhit + " damage");
+						hpE1 = hpE1 - finalhit;
+						if (hpE1 <= 0) {
+							System.out.println("The " + C1 + " faints");
+							Cr1 = false;
+						}
+						finalhit = attack;
+						Turn = false;
+						answer = "90";
+					}
+					if (answer.equals("2")) {
+						finalhit = attack;
+						if (MarmorE1 >= Mdamage) {
+							finalhit = attack/2 + 1;
+						}
+						if (Bolster == true) {
+							finalhit = finalhit * 13;
+							finalhit = finalhit / 10;
+						}
+						System.out.println("You hit the enemy for " + finalhit + " Magical damage");
+						hpE1 = hpE1 - finalhit;
+						if (hpE1 <= 0) {
+							System.out.println("The " + C1 + " faints");
+							Cr1 = false;
+						}
+						finalhit = attack;
+						Turn = false;
+						answer = "90";
+					}
+
+					if (answer.equals("3")) {
+						System.out.println("Which move?");
+						System.out.println("0) exit");
+						if (BloodyHeadbutt == true) {
+							System.out.println("1) BloodyHeadbutt | 3 energy | normal dmg, 35% chance to blind/stun");
+						}
+						if (slam == true) {
+							System.out.println("2) Slam | 4 energy | 65% normal damage to all enemies (rounded down)");
+						}
+						if (GroinKick == true) {
+							System.out.println("3) GroinKick | 2 mana, 2 energy | deal full attack (regardless of enemy armor) and stun all other enemies");
+						}
+						answer = choice.next();
+						if (answer.equals("3") && manaleft > 1 && energyleft > 1 && GroinKick == true) {
+							finalhit = attack;
+							if (Bolster == true) {
+								finalhit = finalhit * 13;
+								finalhit = finalhit / 10;
+							}
+							energyleft -= 2;
+							manaleft -= 2;
+							System.out.println("You hit the enemy for " + finalhit + " damage");
+							hpE1 = hpE1 - finalhit;
+							if (hpE1 <= 0) {
+								System.out.println("The " + C1 + " faints");
+								Cr1 = false;
+							}
+							System.out.println("You stun all the other enemies");
+							if (Cr2 == true) {
+								EStun2 = true;
+							}
+							if (Cr3 == true) {
+								EStun3 = true;
+							}
+							finalhit = attack;
+							Turn = false;
+						}
+						if  (answer.equals("0")) {
+							answer = "90";
+						}
+						if (answer.equals("1") && energyleft >= 3 && BloodyHeadbutt == true) {
+							finalhit = attack;
+							if (armorE1 >= damage) {
+								finalhit = attack/2 + 1;
+							}
+							
+							if (Bolster == true) {
+								finalhit = finalhit * 13;
+								finalhit = finalhit / 10;
+							}
+							energyleft = energyleft - 3;
+							System.out.println("You hit the enemy for " + finalhit + " damage");
+							hpE1 = hpE1 - finalhit;
+							if (hpE1 <= 0) {
+								System.out.println("The " + C1 + " faints");
+								Cr1 = false;
+							}
+							finalhit = attack;
+							double BloodyHeadbuttC = Math.random();
+							BloodyHeadbuttChance = BloodyHeadbuttC * 100;
+							BloodyHeadbuttFinal = (int)BloodyHeadbuttChance + 1;
+							if (BloodyHeadbuttFinal <= 35) {
+								System.out.println("The blood splatterss all over the" + C1);
+								EStun1 = true;
+							}
+							if (BloodyHeadbuttFinal > 35) {
+								System.out.println("The blood splatters outwards");
+							}
+							finalhit = attack;
+							Turn = false;
+						}
+						if (answer.equals("2") && energyleft >= 4 && slam == true) {
+							finalhit = attack;
+
+							finalhit = finalhit * 65;
+							finalhit = finalhit / 100;
+							if (Bolster == true) {
+								finalhit = finalhit * 13;
+								finalhit = finalhit / 10;
+							}
+							if (Cr1 == true) {
+								hpE1 -= finalhit;
+							}
+							if (Cr2 == true) {
+								hpE2 -= finalhit;
+							}
+							if (Cr3 == true) {
+								hpE3 -= finalhit;
+							}
+							if (hpE1 <= 0 && Cr1 == true) {
+								System.out.println("The " + C1 + " faints");
+								Cr1 = false;
+							}
+							if (hpE2 <= 0 && Cr2 == true) {
+								System.out.println("The " + C2 + " faints");
+								Cr2 = false;
+							}
+							if (hpE3 <= 0 && Cr3 == true) {
+								System.out.println("The " + C3 + " faints");
+								Cr3 = false;
+							}
+						}
+						answer = "90";
+					}
+				}
+				if (answer.equals("2") && Cr1 == false) {
+					System.out.println("That creatures... not here");
+				}
+				if (answer.equals("3") && Cr2 == true) {
+
+					System.out.println("What move do you want to use?");
+					System.out.println("1) Normal attack");
+					System.out.println("2) Magic attack");
+					System.out.println("3) Ability");
+					answer = choice.next();
+					if (answer.equals("1")) {
+						finalhit = attack;
+						if (armorE2 >= damage) {
+							finalhit = attack/2 + 1;
+						}
+						if (Bolster == true) {
+							finalhit = finalhit * 13;
+							finalhit = finalhit / 10;
+						}
+						System.out.println("You hit the enemy for " + finalhit + " damage");
+						hpE2 = hpE2 - finalhit;
+						if (hpE2 <= 0) {
+							System.out.println("The " + C2 + " faints");
+							Cr2 = false;
+						}
+						finalhit = attack;
+						Turn = false;
+						answer = "90";
+					}
+					if (answer.equals("2")) {
+						finalhit = attack;
+						if (MarmorE2 >= Mdamage) {
+							finalhit = attack/2 + 1;
+						}
+						if (Bolster == true) {
+							finalhit = finalhit * 13;
+							finalhit = finalhit / 10;
+						}
+						System.out.println("You hit the enemy for " + finalhit + " Magical damage");
+						hpE2 = hpE2 - finalhit;
+						if (hpE2 <= 0) {
+							System.out.println("The " + C2 + " faints");
+							Cr2 = false;
+						}
+						finalhit = attack;
+						Turn = false;
+						answer = "90";
+					}
+
+					if (answer.equals("3")) {
+						System.out.println("Which move?");
+						System.out.println("0) exit");
+						if (BloodyHeadbutt == true) {
+							System.out.println("1) BloodyHeadbutt | 3 energy | normal dmg, 35% chance to blind/stun");
+						}
+						if (slam == true) {
+							System.out.println("2) Slam | 4 energy | 65% normal damage to all enemies (rounded down)");
+						}
+						if (GroinKick == true) {
+							System.out.println("3) GroinKick | 2 mana, 2 energy | deal full attack (regardless of enemy armor) and stun all other enemies");
+						}
+						answer = choice.next();
+						if  (answer.equals("0")) {
+							answer = "90";
+						}
+						if (answer.equals("3") && manaleft > 1 && energyleft > 1 && GroinKick == true) {
+							finalhit = attack;
+							if (Bolster == true) {
+								finalhit = finalhit * 13;
+								finalhit = finalhit / 10;
+							}
+							energyleft -= 2;
+							manaleft -= 2;
+							System.out.println("You hit the enemy for " + finalhit + " damage");
+							hpE2 = hpE2 - finalhit;
+							if (hpE2 <= 0) {
+								System.out.println("The " + C2 + " faints");
+								Cr2 = false;
+							}
+							System.out.println("You stun all the other enemies");
+							if (Cr1 == true) {
+								EStun1 = true;
+							}
+							if (Cr3 == true) {
+								EStun3 = true;
+							}
+							finalhit = attack;
+							Turn = false;
+						}
+						if (answer.equals("1") && energyleft >= 3 && BloodyHeadbutt == true) {
+							finalhit = attack;
+							if (armorE2 >= damage) {
+								finalhit = attack/2 + 1;
+							}
+							if (Bolster == true) {
+								finalhit = finalhit * 13;
+								finalhit = finalhit / 10;
+							}
+							energyleft = energyleft - 3;
+							System.out.println("You hit the enemy for " + finalhit + " damage");
+							hpE2 = hpE2 - finalhit;
+							if (hpE2 <= 0) {
+								System.out.println("The " + C2 + " faints");
+								Cr2 = false;
+							}
+							finalhit = attack;
+							double BloodyHeadbuttC = Math.random();
+							BloodyHeadbuttChance = BloodyHeadbuttC * 100;
+							BloodyHeadbuttFinal = (int)BloodyHeadbuttChance + 1;
+							if (BloodyHeadbuttFinal <= 35) {
+								System.out.println("The blood splatterss all over the" + C2);
+								EStun2 = true;
+							}
+							if (BloodyHeadbuttFinal > 35) {
+								System.out.println("The blood splattersed the wrong way");
+							}
+							finalhit = attack;
+							Turn = false;
+						}
+						if (answer.equals("2") && energyleft >= 4 && slam == true) {
+							finalhit = attack;
+
+							finalhit = finalhit * 65;
+							finalhit = finalhit / 100;
+							if (Cr1 == true) {
+								hpE1 -= finalhit;
+							}
+							if (Cr2 == true) {
+								hpE2 -= finalhit;
+							}
+							if (Cr3 == true) {
+								hpE3 -= finalhit;
+							}
+							if (hpE1 <= 0 && Cr1 == true) {
+								System.out.println("The " + C1 + " faints");
+								Cr1 = false;
+							}
+							if (hpE2 <= 0 && Cr2 == true) {
+								System.out.println("The " + C2 + " faints");
+								Cr2 = false;
+							}
+							if (hpE3 <= 0 && Cr3 == true) {
+								System.out.println("The " + C3 + " faints");
+								Cr3 = false;
+							}
+						}
+					}
+					answer = "90";
+
+				}
+				if (answer.equals("3") && Cr2 == false) {
+					System.out.println("That creatures... not here");
+				}
+				if (answer.equals("4") && Cr3 == true) {
+
+					System.out.println("What move do you want to use?");
+					System.out.println("1) Normal attack");
+					System.out.println("2) Magic attack");
+					System.out.println("3) Ability");
+					answer = choice.next();
+					if (answer.equals("1")) {
+						finalhit = attack;
+						if (armorE3 >= damage) {
+							finalhit = attack/2 + 1;
+						}	
+						if (Bolster == true) {
+							finalhit = finalhit * 13;
+							finalhit = finalhit / 10;
+						}
+						System.out.println("You hit the enemy for " + finalhit + " damage");
+						hpE3 = hpE3 - finalhit;
+						if (hpE3 <= 0) {
+							System.out.println("The " + C3 + " faints");
+							Cr3 = false;
+						}
+						finalhit = attack;
+						Turn = false;
+						answer = "90";
+					}
+					if (answer.equals("2")) {
+						finalhit = attack;
+						if (MarmorE3 >= Mdamage) {
+							finalhit = attack/2 + 1;
+						}
+						if (Bolster == true) {
+							finalhit = finalhit * 13;
+							finalhit = finalhit / 10;
+						}
+						System.out.println("You hit the enemy for " + finalhit + " Magical damage");
+						hpE3 = hpE3 - finalhit;
+						if (hpE3 <= 0) {
+							System.out.println("The " + C3 + " faints");
+							Cr3 = false;
+						}
+						finalhit = attack;
+						Turn = false;
+						answer = "90";
+					}
+
+					if (answer.equals("3")) {
+						System.out.println("Which move?");
+						System.out.println("0) exit");
+						if (BloodyHeadbutt == true) {
+							System.out.println("1) BloodyHeadbutt | 3 energy | normal dmg, 35% chance to blind/stun");
+						}
+						if (slam == true) {
+							System.out.println("2) Slam | 4 energy | 65% normal damage to all enemies (rounded down)");
+						}
+						if (GroinKick == true) {
+							System.out.println("3) GroinKick | 2 mana, 2 energy | deal full attack (regardless of enemy armor) and stun all other enemies");
+						}
+						answer = choice.next();
+						if (answer.equals("3") && manaleft > 1 && energyleft > 1 && GroinKick == true) {
+							finalhit = attack;
+							if (Bolster == true) {
+								finalhit = finalhit * 13;
+								finalhit = finalhit / 10;
+							}
+							energyleft -= 2;
+							manaleft -= 2;
+							System.out.println("You hit the enemy for " + finalhit + " damage");
+							hpE3 = hpE3 - finalhit;
+							if (hpE3 <= 0) {
+								System.out.println("The " + C3 + " faints");
+								Cr3 = false;
+							}
+							System.out.println("You stun all the other enemies");
+							if (Cr2 == true) {
+								EStun2 = true;
+							}
+							if (Cr1 == true) {
+								EStun1 = true;
+							}
+							finalhit = attack;
+							Turn = false;
+						}
+						if  (answer.equals("0")) {
+							answer = "90";
+						}
+						if (answer.equals("1") && energyleft >= 3 && BloodyHeadbutt == true) {
+							finalhit = attack;
+							if (armorE3 >= damage) {
+								finalhit = attack/2 + 1;
+							}
+							if (Bolster == true) {
+								finalhit = finalhit * 13;
+								finalhit = finalhit / 10;
+							}
+							energyleft = energyleft - 3;
+							System.out.println("You hit the enemy for " + finalhit + " damage");
+							hpE3 = hpE3 - finalhit;
+							if (hpE3 <= 0) {
+								System.out.println("The " + C3 + " faints");
+								Cr3 = false;
+							}
+							finalhit = attack;
+							double BloodyHeadbuttC = Math.random();
+							BloodyHeadbuttChance = BloodyHeadbuttC * 100;
+							BloodyHeadbuttFinal = (int)BloodyHeadbuttChance + 1;
+							if (BloodyHeadbuttFinal <= 35) {
+								System.out.println("The blood splatterss all over the" + C3);
+								EStun3 = true;
+							}
+							if (BloodyHeadbuttFinal > 35) {
+								System.out.println("The blood splatters outwards");
+							}
+							finalhit = attack;
+							Turn = false;
+						}
+						if (answer.equals("2") && energyleft >= 4 && slam == true) {
+							finalhit = attack;
+
+							finalhit = finalhit * 65;
+							finalhit = finalhit / 100;
+							if (Bolster == true) {
+								finalhit = finalhit * 13;
+								finalhit = finalhit / 10;
+							}
+							if (Cr1 == true) {
+								hpE1 -= finalhit;
+							}
+							if (Cr2 == true) {
+								hpE2 -= finalhit;
+							}
+							if (Cr3 == true) {
+								hpE3 -= finalhit;
+							}
+							if (hpE1 <= 0 && Cr1 == true) {
+								System.out.println("The " + C1 + " faints");
+								Cr1 = false;
+							}
+							if (hpE2 <= 0 && Cr2 == true) {
+								System.out.println("The " + C2 + " faints");
+								Cr2 = false;
+							}
+							if (hpE3 <= 0 && Cr3 == true) {
+								System.out.println("The " + C3 + " faints");
+								Cr3 = false;
+							}
+						}
+					}
+					answer = "90";
+
+				}
+				if (answer.equals("4") && Cr3 == false) {
+					System.out.println("That creatures... not here");
+				}
+				if (answer.equals("5")) {
+					System.out.println("You");
+					System.out.println("Health left: " + hpleft);
+					System.out.println("Energy left: " + energyleft);
+					System.out.println("Mana left: " + manaleft);
+					System.out.println("----------");
+					System.out.println("Damage is: " + damage);
+					System.out.println("Magical Damage is: " + Mdamage);
+					System.out.println("Attack is: " + attack);
+					System.out.println("Armor is: " + armor);
+					System.out.println("Magical Armor is: " + Marmor);
+					System.out.println("");
+
+				if (OogwayU == true || EmeraldU == true || GrannyU == true) {
+					follower();
+					System.out.println("");
+					System.out.println("Health left: " + hpA);
+					System.out.println("Damage is: " + damageA);
+					System.out.println("Magical Damage is: " + MdamageA);
+					System.out.println("Armor is: " + armorA);
+					System.out.println("Magical Armor is: " + MarmorA);
+					System.out.println("Attack is: " + attackA);
+					System.out.println("");
+				}
+					if (StudyE == true) {
+						if (Cr1 == true) {
+							System.out.println(C1);
+							System.out.println("Health left: " + hpE1);
+							System.out.println("Damage is: " + damageE1);
+							System.out.println("Magical Damage is: " + MdamageE1);
+							System.out.println("Armor is: " + armorE1);
+							System.out.println("Magical Armor is: " + MarmorE1);
+							System.out.println("Attack is: " + attackE1);
+							System.out.println("");
+						}
+						if (Cr2 == true) {
+							System.out.println(C2);
+							System.out.println("Health left: " + hpE2);
+							System.out.println("Damage is: " + damageE2);
+							System.out.println("Magical Damage is: " + MdamageE2);
+							System.out.println("Armor is: " + armorE2);
+							System.out.println("Magical Armor is: " + MarmorE2);
+							System.out.println("Attack is: " + attackE2);
+							System.out.println("");
+						}
+						if (Cr3 == true) {
+							System.out.println(C3);
+							System.out.println("Health left: " + hpE3);
+							System.out.println("Damage is: " + damageE3);
+							System.out.println("Magical Damage is: " + MdamageE3);
+							System.out.println("Armor is: " + armorE3);
+							System.out.println("Magical Armor is: " + MarmorE3);
+							System.out.println("Attack is: " + attackE3);
+							System.out.println("");
+						}
+					}
+				}
+			}
+			if (OogwayU == true || EmeraldU == true || GrannyU == true) {
+				
+				while (ATurn == true) {
+					double target = 4;
+					if (Cr1 == true || Cr2 == true || Cr3 == true) {
+						target = (int)(Math.random() * 3);
+					}else {
+						ATurn = false;
+					}
+				if (target == 0 && Cr1 == true) {
+					if (damageA > MdamageA) {
+						finalhitA = attackA;
+						if (damageA < armorE1) {
+							finalhitA = attackA/2;
+						}
+						follower();
+						System.out.println("Physically attacks the " + C1 + " for " + finalhitA + " Damage");
+						hpE1 = hpE1 - finalhitA;
+						if (hpE1 < 1) {
+							System.out.println("The " + C1 + " faints");
+							Cr1 = false;
+						}
+						ATurn = false;
+						finalhitA = attackA;
+					}
+					if (damageA <= MdamageA) {
+						finalhitA = attackA;
+						if (MdamageA < Marmor) {
+							finalhitA = attackA/2;
+
+						}
+						follower();
+						System.out.println("Magically attacks the " + C1 + " for" + finalhitA + " Damage");
+						hpE1 = hpE1 - finalhitA;
+						if (hpE1 < 1) {
+							System.out.println("The " + C1 + " faints");
+							Cr1 = false;
+						}
+							ATurn = false;
+							finalhitA = attackA;
+					}
+				}
+				if (target == 2 && Cr2 == true) {
+					if (damageA > MdamageA) {
+						finalhitA = attackA;
+						if (damageA < armorE2) {
+							finalhitA = attackA/2;
+						}
+						follower();
+						System.out.println("Physically attacks the " + C2 + " for " + finalhitA + " Damage");
+						hpE2 = hpE2 - finalhitA;
+						if (hpE2 < 1) {
+							System.out.println("The " + C2 + " faints");
+							Cr2 = false;
+						}
+						ATurn = false;
+						finalhitA = attackA;
+					}
+					if (damageA <= MdamageA) {
+						finalhitA = attackA;
+						if (MdamageA < Marmor) {
+							finalhitA = attackA/2;
+
+						}
+						follower();
+						System.out.println("Magically attacks the " + C2 + " for" + finalhitA + " Damage");
+						hpE2 = hpE2 - finalhitA;
+						if (hpE2 < 1) {
+							System.out.println("The " + C2 + " faints");
+							Cr2 = false;
+						}
+							ATurn = false;
+							finalhitA = attackA;
+					}
+				}
+				if (target == 1 && Cr3 == true) {
+					if (damageA > MdamageA) {
+						finalhitA = attackA;
+						if (damageA < armorE3) {
+							finalhitA = attackA/2;
+						}
+						follower();
+						System.out.println("Physically attacks the " + C3 + " for " + finalhitA + " Damage");
+						hpE3 = hpE3 - finalhitA;
+						if (hpE3 < 1) {
+							System.out.println("The " + C3 + " faints");
+							Cr3 = false;
+						}
+						ATurn = false;
+						finalhitA = attackA;
+					}
+					if (damageA <= MdamageA) {
+						finalhitA = attackA;
+						if (MdamageA < Marmor) {
+							finalhitA = attackA/2;
+
+						}
+						follower();
+						System.out.println("Magically attacks the " + C3 + " for" + finalhitA + " Damage");
+						hpE3 = hpE3 - finalhitA;
+						if (hpE3 < 1) {
+							System.out.println("The " + C3 + " faints");
+							Cr3 = false;
+						}
+							ATurn = false;
+							finalhitA = attackA;
+					}
+				}
+			}
+			}
+			if (Cr1 == true && EStun1 == false) {
+				while (Eturn1 == true) {
+					if (damageE1 > MdamageE1) {
+						finalhitE1 = attackE1;
+						if (damageE1 < armor) {
+							finalhitE1 = attackE1/2;
+						}
+						System.out.println("The " + C1 + " Physically attacks you for " + finalhitE1);
+						hpleft = hpleft - finalhitE1;
+
+					}
+					if (damageE1 <= MdamageE1) {
+						finalhitE1 = attackE1;
+						if (MdamageE1 < Marmor) {
+							finalhitE1 = attackE1/2;
+
+						}
+						System.out.println("The " + C1 + " Magically attacks you for " + finalhitE1);
+						hpleft = hpleft - finalhitE1;
+
+					}
+					Eturn1 = false;
+					finalhitE1 = attackE1;
+				}
+				
+			}
+			if (Cr2 == true && EStun2 == false) 
+				while (Eturn2 == true) {{
+					finalhitE2 = attackE2;
+					if (damageE2 > MdamageE2) {
+						if (damageE2 < armor) {
+							finalhitE2 = attackE2/2;
+						}
+						System.out.println("The " + C2 + " Physically attacks you for " + finalhitE2);
+						hpleft = hpleft - finalhitE2;
+					}
+					if (damageE2 <= MdamageE2) {
+						finalhitE2 = attackE2;
+						if (MdamageE2 < Marmor) {
+							finalhitE2 = attackE2/2;
+						}
+						System.out.println("The " + C2 + " Magically attacks you for " + finalhitE2);
+						hpleft = hpleft - finalhitE2;
+					}
+					Eturn2 = false;
+					finalhitE2 = attackE2;
+				}
+				}
+			if (Cr3 == true && EStun1 == false) {
+				while (Eturn3 == true) {
+					finalhitE3 = attackE3;
+					if (damageE3 > MdamageE3) {
+						if (damageE3 < armor) {
+							finalhitE3 = attackE3/2;
+						}
+						System.out.println("The " + C3 + " Physically attacks you for " + finalhitE3);
+						hpleft = hpleft - finalhitE3;
+					}
+					if (damageE3 <= MdamageE3) {
+						finalhitE3 = attackE3;
+						if (MdamageE3 < Marmor) {
+							finalhitE3 = attackE3/2;
+						}
+						System.out.println("The " + C3 + " Magically attacks you for " + finalhitE3);
+						hpleft = hpleft - finalhitE3;
+					}
+					Eturn3 = false;
+					finalhitE3 = attackE3;
+				}
+			}
+			if (Cr1 == false && Cr2 == false && Cr3 == false) {
+				Battle = false;
+				System.out.println("You win, gained " + exp + " Experience");
+				xpR = xpR + exp;
+				win = true;
+			}
+			if (hpleft <= 0) {
+				System.out.println("You loose, you wake up a few hours later dissoriented");
+				Battle = false;
+				win = false;
+			}
+			EStun1 = false;
+			EStun2 = false;
+			EStun3 = false;
+			Eturn1 = true;
+			Eturn2 = true;
+			Eturn3 = true;
+			ATurn = true;
+			Turn = true;
+			Bolster = false;
+		}
+
+		Turn = true;
+		Battle = true;
+		Cr1 = false;
+		Cr2 = false;
+		Cr3 = false;
+		hpleft = hp;
+		manaleft = mana;
+		energyleft = energy;
+	}
+
+}

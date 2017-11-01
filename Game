@@ -1,0 +1,16 @@
+package TheMistyIsles;
+
+public class Game {
+
+	
+	public static void main(String[] args) {
+	
+		Zones zone = new Zones();
+		zone.intro();
+		zone.Start();
+		if (zone.former == true) {
+			zone.former();
+		}
+	}
+
+}

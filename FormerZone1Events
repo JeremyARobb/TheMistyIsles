@@ -1,0 +1,1053 @@
+package TheMistyIsles;
+
+public class FormerZone1Events extends SubsequentZone1Events{
+
+
+	public void pub() {
+		System.out.println("You enter the pub. ");
+		while (Pub == false) {
+			System.out.println("Which way do you go in the pub?");
+			System.out.println("1) turn left");
+			System.out.println("2) turn right");
+			System.out.println("3) exit");
+			if (cocowork == true && cocobowl == false) {
+				System.out.println("4) hand the inkeep the bowl");
+			}
+			answer = choice.next();
+			if (answer.equals("4") && cocowork == true && cocobowl == false) {
+				System.out.println("The inkeep remarks that the Coockoo bird is to the left, and hands you back the bowl, which is now full of cocoa puffs");
+				cocobowl = true;
+				answer = "90";
+			}
+			if (answer.equals("3")) {
+				Pub = true;
+				answer = "90";
+			}
+			if (answer.equals("1") && drunk == true && coco == true) {
+				System.out.println("You continually destroy your liver");
+			}
+			if (answer.equals("1") && coco == true && drunk == false) {
+				System.out.println("You sit down for a drink");
+				System.out.println("Earned a perk: 'Im not drunk, you're Jon Snow' | +1 hp");
+				drunk = true;
+				hp += 1;
+			}
+			if (answer.equals("1") && coco == false) {
+				System.out.println("A crazy bird yelling that he's going 'Coockoo for Cocoa Puffs!' sees you and runs at you!");
+				System.out.println("1) Run away!");
+				System.out.println("2) Chaaaaaaaaaaarge! (attack)");
+				if (cocobowl == true) {
+					System.out.println("3) Dramatically whip out your bowl of Cocoa Puffs.");
+				}
+				answer = choice.next();
+				if (answer.equals("3") && cocobowl == true) {
+					System.out.println("The Coockoo bird jumps at you in a blinding flash, you black out... when you wake up you see the Coockoo bird eating his bowl of cocoa puffs calmly. 'What next,' you think 'A deranged rabbit who's craving another type of sugary goodness?'");
+					cocoalive = true;
+					coco = true;
+
+				}
+				if (answer.equals("1")) {
+					System.out.println("You quickly exit the bar");
+					Pub = true;
+					answer = "90";
+				}
+				if (answer.equals("2")){
+					fight(1, "CoockooBird", "none", "none", level, 15);
+				
+				if (win == false) {
+					System.out.println("You wake up a couple of hours later dazed and confused");
+				}
+				if (win == true) {
+					System.out.println("You knock out the crazy Coockoo bird, 'What next,' you think 'A deranged rabbit who's craving another type of sugary goodness?'");
+					cocodead = true;
+					coco = true;
+					win = false;
+				}
+				}
+			}
+			if (answer.equals("2")) {
+				if (regurgitatery1 == true) {
+					System.out.println("Oh no you don't");
+				}
+				if (regurgitatery1 == false) {
+					System.out.println("Nothing to see here, just a regurgitatery *Shudders*");
+					System.out.println("1) Whats that?");
+					System.out.println("2) Ew, I'm not going anywhere near that");
+					answer = choice.next();
+					if (answer.equals("1")) {
+						System.out.println("Its horrible, its where the animals such as owls and seabirds regurgitate the bones of the meal they just ate");
+						System.out.println("1) Inspect the regurgitatery");
+						System.out.println("2) back away slowly");
+						answer = choice.next();
+						if (answer.equals("1")) {
+							System.out.println("What are you doing, theres flies by there, not the average house fly either, these things have lived here their whole life, heck they were probably born right here in this hot, moist sack."
+									+ " If one even touches you it could give you all numbers of diseases, and dont even get me started on the smell, oh god, the smell. You can litteraly see small green lines wiggling upwards as if even they want to escape the smell, and they litteraly are the smell. What kind of sane animal would get anywhere near that thing");
+							System.out.println("1) Owls and seabirds (inspect closer)");
+							System.out.println("2) you know what, you're right (leave)");
+							answer = choice.next();
+							if (answer.equals("1")) {
+								System.out.print("No, what are you doing! You think just because you're the protagonist of a fictional story you cant die a horrible death in the tutorial? think of your life, your friends, your kids if you have any for peetes sake!");
+								System.out.print(" I just wanted a normal player to play this, but no, I got a player named " + Fname + " ");
+								nickname();
+								System.out.println(Lname + ", Agh. Hey whats that at the bottom of the sack, the greenish redish elasticy thing");
+								System.out.println("1) Grab it!");
+								System.out.println("2) Listen to the narrator, the controller of your destiny for crying out loud");
+								answer = choice.next();
+								if (answer.equals("1")) {
+									System.out.println("You recieved an item: Gut laced headband");
+									System.out.println("");
+									regurgitatery1 = true;
+									GutHeadband = true;
+								}
+							}
+							if (answer.equals("2")) {
+								System.out.println("Took you long enough");
+								System.out.println("");
+							}
+						}
+						if (answer.equals("2")) {
+							System.out.println("");
+						}
+					}
+					if (answer.equals("2")) {
+						System.out.println("Good choice");
+						System.out.println("");
+					}
+				}
+			}
+		}
+		Pub = false;
+	}
+	public void quests1() {
+		while (QuestZone == false) {
+			if (Duel == false){
+		 		System.out.print("There is a rooster in the sparring grounds claiming to be the strongest, and fairest cockerel there ever was. ");
+			}
+			if (banditD == true && cocoend == true && Stick == false) {
+				System.out.print("You see an old, scragely looking pheasant watching you with curiosity ");
+			}
+			if (Riddles == false) {
+				System.out.print("You look around the town and see a puppy with a frown on their face (oh so sad)");
+			}
+			if (cocostart == false) {
+				System.out.print(" You see an elderly grandma bird sitting fretfully with a bowl. ");
+			}
+			if (bandits == false) {
+				System.out.println(" You see a porcupine playing 'pin the needle' on a wanted creature poster");
+			}
+			if (Duel == false){
+				System.out.println("");
+				System.out.println("0) go talk to the rooster");
+			}
+			if (Riddles == false) {
+				System.out.println("");
+				System.out.println("1) Talk to the puppy"); //solve riddles
+			}
+			if (cocoend == false) {
+				System.out.println("");
+				System.out.println("2) Talk to the grandma"); //get cocoa puffs for Coockoo bird]
+			}
+			if (Chicken2 == true && ChickenDone == false) {
+				System.out.println("");
+				System.out.println("3) Tell the porcupine the jobs done");
+			}
+			if (bandits == false) {
+				System.out.println("");
+				System.out.println("3) Talk to the porcupine"); //take care of the bandits
+			}
+			System.out.println("");
+			System.out.println("4) Exit");
+
+			if (banditD == true && cocoend == true && Stick == false) {
+				System.out.println("");
+				System.out.println("5) Approach the pheasant");
+			}
+			answer = choice.next();
+			if (answer.equals("4")) {
+				QuestZone = true;
+				answer = "90";
+			}
+			if (answer.equals("0") && Duel == false){
+				if (DuelIntro == false){
+					System.out.println("You go up and talk to the rooster. 'Why hello foolish traveler, have you come to challenge the glorious Ser CockleDoodleDoo? For I am undefeatable, less you have needles somewhere on you. Sadly for you, you are neither a porqupine nor a hedgehog so booho for you!' he proceeds to ramble on and on. From what you get by listening to at most 10% of what he said, if you win you get a key of some sort.");
+					DuelIntro = true;
+				}
+				System.out.println("To defeat the rooster you'll most likely need needles, so unless you have those, it is suggested you leave, unless you want to get absolutely annihilated by a rooster going by the name 'CockleDoodleDoo' for some reason");
+				System.out.println("1) Fight!");
+				System.out.println("2) Leave!");
+				answer = choice.next();
+				if (answer.equals("1")){
+					if (NeedlePantsE == false){
+						fight(1, "CockleDoodleDoo", "x", "x", 12, 20);
+					}
+					if (NeedlePantsE == true){
+						System.out.println("The rooster falls to the ground. Gasping for breath he manages to muster, 'How.... how did you find..' he takes a big hesitant gulp and then says '....needles'");
+						fight(1, "CockleDoodleDoo", "x", "x", 1, 20);
+					}
+					if (win == false && cocky == true){
+						System.out.println("By now it's just kind of sad");
+					}
+					if (win == false && cocky == false){
+						System.out.println("You fall to the ground, defeated, as both CockleDoodleDoo and the narrator told you that you would");
+						System.out.println("Gained perk: Cocky: You dissobeyed the two golden rules of this game, listen to the narrator, and listen to roosters. | -1 energy");
+						cocky = true;
+						energy -= 1;
+					}
+					if (win == true){
+						System.out.println("CockleDoodleDoo falls to the muck below with a *sploosh*, you see the glint of a key in the mud below. In one swift move, you snatch it, claiming it as your rightfull prize.");
+						Duel = true;
+					}
+				}
+				if (answer.equals("2")){
+					System.out.println("You back away from CockleDoodleDoo slowly as to not provoke his manliness");
+				}
+				answer = "90";
+			}
+			if (answer.equals("5") && banditD == true && cocoend == true && Stick == false) {
+				System.out.println("You go up to the pheasant and he says in an old semi shabby, semi crazy voice 'i need a stick, give me a stick! you, do you have a stick on you?!?!?! i need a stick!'");
+				System.out.println("1) no sorry crazy pheasant I dont have a stick");
+				if (RealStickE == true) {
+					System.out.println("2) Actually yes I do have a stick");
+				}
+				answer = choice.next();
+				if (answer.equals("1")) {
+					System.out.println("the old pheasant keeps muttering about how he needs a stick");
+					answer = "90";
+				}
+				if (answer.equals("2") && RealStickE == true) {
+					damage -= 1;
+					Mdamage -= 1;
+					RealStickE = false;
+					RealStick = false;
+					Stick = true;
+					weapon = true;
+					System.out.println("The pheasant's eyes light up in delight, he takes the stick and happily flies away, leaving behind part of what looks like a staff. Gained 15 xp");
+					xpR += 15;
+					MagicP1 = true;
+				}
+			}
+			if (answer.equals("3") && bandits == false) {
+				System.out.println("You ask the porcupine who the guys in the posters are. 'Well, they call themselves the FirstEggs, they've been stealing our eggs and using them to recreate an authentic human chicken coop, I dont want them dead but can you at least bring them in?'");
+				System.out.println("1) This sounds like the least intense gang I've ever heard of, sure");
+				System.out.println("2) Sorry, I got more important things to do");
+				answer = choice.next();
+				if (answer.equals("1")) {
+					System.out.println("'Thanks, I've marked the place on your map'");
+					System.out.println("You have unlocked exploring");
+					System.out.println("");
+					bandits = true;
+					BanditCoop = true;
+				}
+				if (answer.equals("2")) {
+					System.out.println("You politely decline");
+				}
+				answer = "90";
+			}
+			if (answer.equals("3") && Chicken2 == true && ChickenDone == false) {
+				System.out.print("'Why thank you " + Fname + " ");
+				nickname();
+				System.out.println(" " + Lname + ".' She gives you some pants as a reward");
+				System.out.println("Gained pants: NeedlePants  |  Gained 10 xp");
+				ChickenDone = true;
+				NeedlePants = true;
+				banditD = true;
+				xpR += 10;
+			}
+			if (answer.equals("1") && Riddles == false) {
+				System.out.println("You go up to the puppy and ask 'why the long face?'. The puppy responds that he can't join the book club if he can't solve these three riddles");
+				System.out.println("1) Offer to help");
+				System.out.println("2) well puppy, it looks like you wont be reading any time soon");
+				answer = choice.next();
+				QuestOption = false;
+				if (answer.equals("1")) {
+					while (QuestOption == false){
+						System.out.println("The first one says, 'I'm always in front, and never behind. What am I?'");
+						System.out.println("1) Your bottom");
+						System.out.println("2) Usain Bolt, the falcon");
+						System.out.println("3) the future");
+						answer = choice.next();
+						if (answer.equals("1")) {
+							System.out.println("No, that was litteraly a 'THIS IS A FREE WRONG ANSWER JUST DONT CLICK 1 AND YOU'RE GOOD' kind of question");
+							System.out.println("");
+							Wrongs += 1;
+							QuestOption = true;
+						}
+						if (answer.equals("2")) {
+							System.out.println("No cause the question was what, not who. Also he did loose his last race before he retired.");
+							System.out.println("");
+							Wrongs += 1;
+							QuestOption = true;
+						}
+						if (answer.equals("3")) {
+							System.out.println("Oo yeah, thatd be it!");
+							System.out.println("");
+							QuestOption = true;
+						}
+					}
+					QuestOption = false;
+					while (QuestOption == false) {
+						System.out.println("The second one says, 'What goes down, but never comes up?'");
+						System.out.println("1) Rain");
+						System.out.println("2) My Spirits, my hopes, my dreams, anything related to my mood to be perfectly honest");
+						System.out.println("3) My hpLeft in battle");
+						System.out.println("4) The amount of characters in A Game Of Thrones 'rat edition'");
+						answer = choice.next();
+						if (answer.equals("1")) {
+							System.out.println("I mean, the definition of rain would say you are correct");
+							QuestOption = true;
+						}
+						if (answer.equals("2")) {
+							while (QuestOption == false) {
+								System.out.println("Im at a impasse, if I give you the point your spirit will go up, but if I dont, it will go down, proving you correct");
+								System.out.println("1) Trust me, nothings bringing that thing back up, just give me the point");
+								System.out.println("2) just dont give it to me");
+								answer = choice.next();
+								if (answer.equals("1")) {
+									System.out.println("Wow, okay you can have it I suppose");
+									System.out.println("Gained a Nickname: 'DebbieDowner'");
+									System.out.println("");
+									DebbieDowner = true;
+									QuestOption = true;
+								}
+								if (answer.equals("2")) {
+									System.out.println("You said it not me.");
+									System.out.println("");
+									Wrongs += 1;
+									QuestOption = true;
+								}
+								answer = "90";
+							}
+						}
+						if (answer.equals("3")) {
+							System.out.println("False, it heals after battle and/or if you heal");
+							Wrongs += 1;
+							QuestOption = true;
+						}
+						if (answer.equals("4")) {
+							System.out.println("Can't argue with that I suppose");
+							QuestOption = true;
+						}
+					}
+					QuestOption = false;
+					while (QuestOption == false) {
+						System.out.println("The Third one says, 'What are the first 10 decimals of pi? You're not really sure if this is a riddle. In parenthesis it says (bonus points if you havent used the internet by now)");
+						System.out.println("1) 3.1415926535");
+						System.out.println("2) 3.1416393821");
+						System.out.println("3) 3.1426393821");
+						answer = choice.next();
+						if (answer.equals("1")) {
+							System.out.println("Correct!");
+							System.out.println("");
+							QuestOption = true;
+						}
+						if (answer.equals("2")) {
+							System.out.println("Wrong, but im going to give you it cause you didnt use the internet");
+							System.out.println("");
+							QuestOption = true;
+						}
+						if (answer.equals("3")) {
+							System.out.println("Wrong, but im going to give you it cause you didnt use the internet");
+							System.out.println("");
+							QuestOption = true;
+						}
+						answer = "90";
+					}
+					if (Wrongs <= 1) {
+						System.out.println("The puppy thanks you and gives you his hat, on it is inscribed his name 'Sherlock bones'");
+						System.out.println("Recieved item: Sherlock hat | see enemy stats");
+						SherlockHat = true;
+						Riddles = true;
+					}
+					if (Wrongs > 2) {
+						System.out.println("No no no, they dont fit, he says, walking away in frustration");
+						Riddles = true;
+					}
+				}
+				if (answer.equals("2")) {
+					if (savage == false) {
+						System.out.println("You unlocked a perk: Savage | some more dialogue options will appear");
+						savage = true;
+					}
+					if (savage == true) {
+						System.out.println("Jeez, that was rutheless");
+					}
+					answer = "90";
+				}
+
+			}
+			if (answer.equals("2") && cocostart == true && cocowork == true && cocoend == false) {
+				QuestZone = false;
+				while (QuestZone == false) {
+					System.out.println("Have you settled down my grandson yet?");
+					if (cocoalive == true) {
+						System.out.println("1) Yes I have, heres the bowl, licked clean");
+					}
+					if (cocodead == true) {
+						System.out.println("2) Yeah...");
+					}
+					if (cocoalive == false && cocodead == false) {
+						System.out.println("3) Not yet");
+					}
+					answer = choice.next();
+					if (answer.equals("1") && cocoalive == true) {
+						System.out.println("The granny thanks you kindly. Gained 25 xp.");
+						xpR += 25;
+						QuestZone = true;
+						cocoend = true;
+					}
+					if (answer.equals("2") && cocodead == true) {
+						System.out.println("The granny reluctantly thanks you kindly. Gained 10 xp.");
+						xpR += 10;
+						cocoend = true;
+						QuestZone = true;
+					}
+					if (answer.equals("3")) {
+						System.out.println("You tell her no");
+						QuestZone = true;
+					}
+				}
+				QuestZone = false;
+			}
+			if (answer.equals("2") && cocostart ==  false) {
+				QuestOption = false;
+				while (QuestOption == false) {
+					System.out.println("You approach the elderly Coockoo bird, 'oh deary me, oh deary you, oh deary.. what am i to do?'. You approach her and ask whats wrong and she responds that she forgot to give her grandson his bowl of"
+							+ ""
+							+ " cocoa puffs, she needs someone to go ask the inkeeper to fill it up and then to give it to him wherever he is");
+					System.out.println("1) I'll go give him his cocoa puffs");
+					System.out.println("2) well, good luck with that");
+					if (cocodead == true) {
+						System.out.println("3) *Ahem* I saw your grandson at the bar and I can assure you that he's no longer going Coockoo...");
+					}
+					answer = choice.next();
+					if (answer.equals("1")) {
+						System.out.println("'Thank you dear, heres the bowl that the inkeep will fill for you'");
+						cocostart = true;
+						cocowork = true;
+						QuestOption = true;
+					}
+					if (answer.equals("2")) {
+						System.out.println("You back away from the granny");
+						QuestOption = true;
+					}
+					if (answer.equals("3") && cocodead == true) {
+						System.out.println("The granny looks a bit confused, after a bit she says 'well, as long as he's simmered down'");
+						System.out.println("You gain 10 xp");
+						cocostart = true;
+						cocowork = false;
+						cocoend = true;
+						xpR += 10;
+						QuestOption = true;
+					}
+				}
+				QuestOption = false;
+			}
+		}
+		QuestZone = false;
+		answer = "90";
+	}
+	public void exploreF1() {
+		if (Chicken2 == false) {
+			System.out.println("1) BanditCoop");
+		}
+		if (Mugging == true) {
+			System.out.println("2) Backalley street");
+		}
+		if (Mugging == false) {
+			System.out.println("2) ???");
+		}
+		if (bureaucracy == false) {
+			System.out.println("3) ???");
+		}
+		if (bureaucracy == true) {
+			System.out.println("3) Waterhole");
+		}
+		if (MasterOogway == false) {
+			System.out.println("4) ???");
+		}
+		if (MasterOogway == true) {
+			System.out.println("4) Pagoda");
+		}
+		answer = choice.next();
+		if (answer.equals("5") && MagicP1 == true && MagicP2 == true && MagicP3 == true) {
+			
+		}
+		if (answer.equals("4")) {
+			if (MasterOogway == false) {
+				System.out.println("You come upon a pagoda, though old you can see it has not been forgotten, a great garden full of every color and every plantable food flows around the pagoda reminding you of a serene river on a quiet, sunny, spring morning. As you approach the gate you see that it's locked, and the fence is built in the way that you cant climb over, to get through you're going to need the key.");
+				MasterOogway = true;
+			}
+			System.out.println("What would you like to do with the gate?");
+			System.out.println("1) Leave");
+			System.out.println("2) Try to force the lock");
+			if (Duel == true) {
+				System.out.println("3) Use the key to open the lock.");
+			}
+			answer = choice.next();
+			if (answer.equals("1")) {
+				System.out.println("You leave");
+			}
+			if (answer.equals("2")) {
+				System.out.println("As hard as you try you cant seem to force the lock open.");
+			}
+			if (answer.equals("3") && Duel == true) {
+				System.out.println("as soon as the lock is opened the gate swings open, as if inviting you inside");
+				LockOpen = true;
+			}
+			if (LockOpen == true) {
+				System.out.println("As you near the pagoda you feel the slight breeze of the willow trees and you can hear the buzzing of the bees. You are about to enter when a scruffy voice ask you 'why do you go in the pagoda young one, it is such a nice day out'.");
+			System.out.println("1) It wasn't my choice, the narrator made me. Anyways, who are you?");
+			System.out.println("2) Who are you?");
+			answer = choice.next();
+			System.out.println("By now you have found the voice, it belongs to an old turtle, he was tending the flowers that all the bees seemed to be heading towards. 'I am master Oogway, I live here, will you help me tend to my flowers?'. You accept. While you two tend to the garden Master Oogway teaches you some tricks in battle, he keeps saying stuff like 'A man who can conquer himself, can conquer anything' and other wise old man stuff that makes no sense, but after a few hours he teaches you a usefull trick called 'Spirit of the Groin kick'");
+			System.out.println("Gained ability/spell: Spirit of the Groin Kick | 2 mana, 2 energy | deal full attack (regardless of enemy armor) and stun all other enemies");
+			System.out.println("On your way out he hands you a piece of a staff, 'Here young one, you're going to need this'");
+			MagicP3 = true;
+			}
+			answer = "90";
+		}//end pagoda
+		if (answer.equals("3") && Blost == true) {
+			System.out.println("You decide not to go back to the watering hole after remembering that you had your pass stolen by a robovorski hamster");
+		}
+		if (answer.equals("3") && saturated == true) {
+			System.out.println("You drink some more");
+		}
+		if (answer.equals("3") && Bwon == true && saturated == false) {
+			System.out.println("You go and drink to your hearts content");
+			System.out.println("Gained perk: Saturated, you still have a bit of room incase you happen upon some shire | +1 mana");
+			saturated = true;
+		}
+		if (answer.equals("3") && BDone == false) {
+			System.out.println("You discovered the waterhole, finally, you were beginning to think you might die of dehydration. As you approach you ask the gatekeeper for entry, they say you can come in, you just need to fill out a visitor form.");
+			System.out.println("");
+			bureaucracy = true;
+			while (BDone == false) {
+				System.out.println("'First name?'");
+				System.out.println("1) " + Fname);
+				System.out.println("2) Larry");
+				System.out.println("3) " + Lname);
+				System.out.println("4) Hagatha");
+				System.out.println("5) Rick");
+				answer = choice.next();
+				if (answer.equals("4")) {
+					B1 = true;
+				}else {
+					B1 = false;
+				}
+				System.out.println("'And last name?'");
+				System.out.println("1) Sanchez");
+				System.out.println("2) TinkleToes");
+				System.out.println("3) " + Lname);
+				System.out.println("4) Bronzebeard");
+				System.out.println("5) Baker");
+				if (B3 == true) {
+					System.out.println("6) " + Lname + ".");
+				}
+				answer = choice.next();
+				if (answer.equals("6") && B1 == true && B3 == true) {
+					System.out.println("'Ok, just one more easy question, any folk from around here would know the answer to this. How many nicknames can you earn in Bromble?'");
+					B4 = true;
+				}
+				if (answer.equals("3") && B1 == true && B2 == true) {
+					System.out.println("The gatekeeper looks at the slip, then looks at you and tells you that you forgot to add a punctuation at the end of your name.");
+					B3 = true;
+				}
+				if (answer.equals("5") && B1 == true) {
+					System.out.println("Oh wait, you need to use your real last name, sorry about that");
+					B2 = true;
+				}
+				if (B1 == false) {
+					System.out.println("Oh yeah, the theme of todays visitor cards is to have a medieval name");
+				}
+				if (B1 == true && B2 == false) {
+					System.out.println("Hagatha was a good start, but that last name was lacking");
+				}
+				if (B1 == true && B2 == true && B3 == false) {
+					System.out.println("you need to use your last name");
+				}
+				if (B1 == true && B2 == true && B3 == true && B4 == false) {
+					System.out.println("You need a punctuation at the end of your name");
+				}
+				if (B1 == false) {
+					B4 = false;
+				}
+				if (B4 == true) {
+					System.out.println("0) 0");
+					System.out.println("1) 1");
+					System.out.println("2) 2");
+					System.out.println("3) 3");
+					System.out.println("4) 4");
+					System.out.println("5) 5");
+					answer = choice.next();
+					if (answer.equals("0") && B5 == false) {
+						System.out.println("Thats right, everyone knows the town is called Bramble, not Bromble. Bromble is just what this watering hole is called, and no one's ever got a nickname here");
+						System.out.println("Nickname earned: Mooreaucrat.... You look at the gatekeeper, silently pleading to just let you through. They hand you another visitor slip.");
+						mooreaucracy = true;
+						B5 = true;
+					}else if (answer.equals("1") && B5 == true) {
+						System.out.println("After looking over your visitor slip for for even the slightest mistake, the gatekeeper finally lets you through.");
+						System.out.println("A message from the narrator: If you think that was annoying, That whole script got deleted for me and I had to rewrite the entire thing");
+						System.out.println("1) Why in the heck would you go out of your way for this, all it did was cause both of us pain?");
+						System.out.println("2) Im Redeleting this script after I'm done finding out whats past this gate of hell");
+						answer = choice.next();
+						System.out.println("Anywayssss, you enter the waterhole, it's nestled right by a mountain, in fact, some of it seeps into the mountain, creating a cave, you go for a nice swim and rehydrate, as you're getting out a crazy roborovski hamster attacks you yelling that your visitor slip is now his");
+						System.out.println("1) Id go to FrostGlade and back before I give up this visitor slip!");
+						System.out.println("2) Here's my visitor slip roborovski hamster just please dont hurt me!");
+						answer = choice.next();
+						System.out.println("The roborovski hamster doesn't even seem to hear you, he pounces");
+						fight(1, "RoborovskiHamster", "X", "X", level, 15);
+						if (win == false) {
+							System.out.println("The hamster leaves you dusted, you hear the pitter patter of his feet taking your visitor slip away, you see that in his rush to get away he dropped his paper hat, which seems to be made out of other visitor slips, sadly, none of which have your name on them. You also see part of what looks like a broken staff");
+							System.out.println("Recieved hat: PaperHat | 2 mana | a spell that increases your attack by 30% for the turn");
+							PaperHat = true;
+							MagicP2 = true;
+							BDone = true;
+							Blost = true;
+						}
+						if (win == true) {
+							System.out.println("You take out the hamster with lighting like moves, luckily for the hamster, he's able to get away before your able to finish your combo on him. In his rush to get away he left behind two things, part of a broken staff, and a paper hat, made out of other visitor slips");
+							System.out.println("Recieved hat: PaperHat | 2 mana | a spell that increases your attack by 30% for the turn");
+							PaperHat = true;
+							MagicP2 = true;
+							BDone = true;
+							Bwon = true;
+						}
+					}
+					
+				}
+			}//while BDone == false
+			
+		}
+		if (answer.equals("2")) {
+			if (Mugging == false) {
+				System.out.println("You discovered Backalley street, what a bad name for a street you remark to yourself");
+				System.out.println("");
+				System.out.print("You enter the backalley street, the air feels hotter here and most the animals have eye patches or some sort of makeshift leg, one has both of those, and has a tattoo that says 'You should see the other guy'.");
+
+				Mugging = true;
+			}
+			Choice = false;
+
+			System.out.print("You reach the end of the street, all of it was mostly run down houses, gambling areas, and former gangs.");
+			if (hardcore == true || dweeb == true) {
+				System.out.println("To your right is the tattoo parlor, you're definitely not going back in there");
+			}
+			if (hardcore == false && dweeb == false) {
+				System.out.println(" To your right is an old tattoo parlor called 'The Shrewd Tattoo parlor'");
+			}
+			if (MuggingS == false) {
+				System.out.println(" To your left theres a dark backalley way, you cant really see whats down that way. ");
+			}
+			if (MuggingS == true && Magic == false) {
+				System.out.println(" Where the backalley was there's somehow now a magic store that goes by the name of 'Mopeys Magic Store'. what a sad name you think to yourself");
+			}
+			while (Choice == false) {
+				System.out.println("");
+				if (MuggingS == false) {
+					System.out.println("1) Go into the dark, creepy, backalley, cause thats a good idea");
+				}
+				if (MuggingS == true) {
+					System.out.println("1) Go into Mopeys Magic Store");
+				}
+				System.out.println("2) Go into the tattoo parlor");
+				System.out.println("3) leave");
+				answer = choice.next();
+				if (answer.equals("3")) {
+					System.out.println("You leave");
+					System.out.println("");
+					Choice = true;
+				}
+				if (answer.equals("1") && Magic == true) {
+					System.out.println("You decide it best to not go back in until you have all three pieces of the staff. Fun fact, this was the last sentance that was scripted in the game.");
+				}
+				if (answer.equals("1") && MuggingS == true && Magic == false) {
+					System.out.println("You enter the old beaten up magic store, but when you do it's transformed into a magical almost palacelike place, you see the moorno and he explains how the whole goose thing was an illusion to see if you were a friend or foe. and after deciding you were a friend he let you in cause he needs a favor");
+					System.out.println("1) ask what he needs");
+					System.out.println("2) this option is here because the narrator is making you take this quest but is giving you the illusion of choice");
+					answer = choice.next();
+					System.out.println("The moorno explains that a lot of people in this place are subsequents that are trapped here because there's some giant predators back in the Earthen Footlands, the problem is if they are discovered they will most likely be killed by the gang running this whole place called the 'Ghastly Goslings of asGard', what a nerdy name you think to yourself");
+					System.out.println("1) What about my problems, no one ever asks if they can take any quests from me, but I'll accept");
+					System.out.println("2) Sure, what do I need to do?");
+					answer = choice.next();
+					System.out.println("The moorno explains that you'll simply need to find out the 3 pieces of a staff from quests that are all coincidentally scattered around some core areas you need to go through in the land. the moorno proceeds to give you a weapon as gratitude for you helping him");
+					System.out.println("He gives you a Sharp Bunny Wand and tells you to use it however you please, using magic or just to poke people with it");
+					System.out.println("Gained an item: BunnyWand | attack + 2");
+					BunnyWand = true;
+					Magic = true;
+				}
+				
+				if (answer.equals("2") && hardcore == true){
+					System.out.println("You decide not to go back in there considering you can't look at the secretary without the involuntary need to hurl");
+					answer = "90";
+				}
+				if (answer.equals("2") && dweeb == true){
+					System.out.println("Due to your lack of confidence, you decide not to go back in the tattoo parlor knowing that they will all just laugh at you");
+					answer = "90";     
+				}
+				if (answer.equals("2") && hardcore == false && dweeb == false) {
+					Choice = false;
+					System.out.println("You enter the tattoo parlor, you can smell the scent of blood everywhere, and even see a few stains on the ground. 'Well, what kinda tat are you looking for then runt?' asks a shrew with not one but two eyepatches, you wonder how she can see");
+					System.out.println("1) 'I'll have the one the man screaming in the back is having'");
+					System.out.println("2) Look her straight in the eyepatch and tell her that you'll have an 'I love my Mom' one");
+					while (Choice == false) {
+						answer = choice.next();
+						if (answer.equals("1")){
+							System.out.println("The shrew smiles a bit and signals you to go in a room, an older looking shrew (luckily with no eyepatches) comes in and without a word starts dabbing your arm, you then see him pull out av abnormally large needle, the kind they use to put down the big ones (bigger animals) in the movies");
+							System.out.println("1) Err actually I'd like that 'I heart mom' tattoo instead");
+							System.out.println("2) Well, it looks like this is where the tutorial.... and game ends");
+							answer = choice.next();
+							System.out.println("The man suddenly injects you with some gunky looking liquid, and slowly you start to fade, it feels like that time you drank one too many Shires..... A couple hours, maybe days later you wake up in the room alone, you look at your reflection and see the tattoo, going right across chest");
+							System.out.println("1) It says 'I love mom' right?");
+							System.out.println("2) It cant be that bad, you should see some of the ones at my school");
+							answer = choice.next();
+							System.out.println("Im not even going to bother to see what you put, cause no matter what you said, wrong, this is like, horrible, I dont know if the man in the back screaming had a crush on the eyepatch lady or something but its her, the only problem is, she has no eyepatches on, its just big, wet, creamy, pus filled scabs that seem to be bulging, now if you will excuse me I need to go throw up in that regurgitatery back at the pub");
+							System.out.println("Gained a perk: Hardcore | +1 damage");
+							damage += 1;
+							Choice = true;
+							hardcore = true;
+							answer = "90";
+						}
+						if (answer.equals("2")) {
+							System.out.println("The shrew frowns and shows you to a room, a nerdy looking fellow that claims to be her brother stumbles in and stammers to tell you that this is his first time doing a tattoo, he dabs your arm and tenderly uses a blunted needle, whenever he sees a drop of blood he has to do two things, the first is apologize an innumerable ammount of times, and the second is to run outside to throw up");
+							System.out.println("1) Well, looks like we'll be here a while");
+							System.out.println("2) Can he just let me do it?");
+							answer = choice.next();
+							System.out.println("After hours and hours of a vicious cycle of poking and apologizing its finally done, you look in the reflection, there's a tiny little heart that says 'I love mom' in it with a little arrow going through the heart, as you leave you see the lady shrew who greeted you at the entrance slightly laughing at you, you wonder how considering she can't see");
+							System.out.println("Gained a perk: Dweeb | +1 Magical Damage");
+							Mdamage += 1;
+							dweeb = true;
+							Choice = true;
+						}
+					}
+					Choice = false;
+					answer = "90";
+				}
+
+				if (answer.equals("1") && MuggingS == false) {
+					while (Choice == false) {
+
+						System.out.println("You enter the dark smelly back alley, while going through you see a group of geese mugging a subsequent, you can't really make out its figure from where you are");
+						System.out.println("1) Attack them!");
+						if (savage == true) {
+							System.out.println("2) Go up and bite the dumb ones stupid looking body as hard as you can and dont stop biting until it faints or the geese back off (requires perk: Savage)");
+						}
+						answer = choice.next();
+						if (answer.equals("1")) {
+							System.out.println("You attack the geese!");
+							fight(2, "FatGoose", "DumbGoose", "none", 1, 15);
+							if (win == false) {
+								System.out.print("Just as you decide to inscribe your name in the mucky dirt saying ^here lies " + Fname + " ");
+								nickname();
+								System.out.print(" " + Lname + ". Killed by geese.^ the subsequent rams its behind into the geese and sends them flying into the wall. ");
+								win = true;
+							}
+							if (win == true) {
+								while (Choice == false) {
+									System.out.println("With the geese defeated you ask the subsequent who he is, he says that he's a moorno, a kind of crossbread between a small cow and a rhino. You notice that he walks backwards, you ask why. 'well, its cause of this moonwalker shirt I have on, here, I want you to have it' he takes it off and just gives it to you");
+									System.out.println("1) This is the weirdest gift i've ever recieved /:");
+									System.out.println("2) This is the best gift i've ever recieved :D");
+									System.out.println("3) This is the only gift ive ever recieved 3:");
+									answer = choice.next();
+									if (answer.equals("1")) {
+										System.out.println("Well, up till now a moorno is also the weirdest creature you've ever met");
+										System.out.println("Recieved item: Moonwalker shirt | +2 Mana");
+										MoonWalker = true;
+										MuggingS = true;
+										Choice = true;
+										answer = "90";
+									}
+									if (answer.equals("2")) {
+										System.out.println("I mean, who doesn't like a moonwalking shirt");
+										MoonWalker = true;System.out.println("Recieved item: Moonwalker shirt | +2 Mana");
+										MuggingS = true;
+										Choice = true;
+										answer = "90";
+									}
+									if (answer.equals("3")) {
+										System.out.println("Well, you can proudly say the first gift you ever got was from a cow rhino who was getting mugged by geese now at least");
+										System.out.println("Recieved item: Moonwalker shirt | +2 Mana");
+										MoonWalker = true;
+										MuggingS = true;
+										Choice = true;
+										answer = "90";
+									}
+								}
+							}
+						}
+						if (answer.equals("2") && savage == true) {
+							System.out.println("You bite the dumb goose, the other looks apalled and remarks that the goose was in a dumpster eating mice a minute ago, you assume he's just trying to make you let go, the dumb goose faints and you let go of him and the other goose attacks in a furious rage");
+							fight(1, "FuriousFatGoose", "none", "none", level, 15);
+							if (win == false) {
+								System.out.print("Just as you decide to inscribe your name in the mucky dirt saying ^here lies " + Fname + " ");
+								nickname();
+								System.out.println(" " + Lname + ". Killed by geese.^ the subsequent rams its behind into the geese and send them flying into the wall ");
+								win = true;
+							}
+							if (win == true) {
+								while (Choice == false) {
+									System.out.println("With the geese defeated you ask the subsequent who he is, he says that he's a moorno, a kind of crossbread between a small cow and rhino. You notice that it walks backwards, you ask why. 'well, its cause of this moonwalker shirt I have on, here, I want you to have it' he takes it off and just gives it to you");
+									System.out.println("1) This is the weirdest gift i've ever recieved /:");
+									System.out.println("2) This is the best gift i've ever recieved :D");
+									System.out.println("3) This is the only gift ive ever recieved 3:");
+									answer = choice.next();
+									if (answer.equals("1")) {
+										System.out.println("Well, up till now a moorno is also the weirdest creature you've ever met");
+										System.out.println("Recieved item: Moonwalker shirt | +2 Mana");
+										MoonWalker = true;
+										MuggingS = true;
+										Choice = true;
+										answer = "90";
+									}
+									if (answer.equals("2")) {
+										System.out.println("I mean, who doesn't like a moonwalking shirt");
+										System.out.println("Recieved item: Moonwalker shirt | +2 Mana");
+										MoonWalker = true;
+										Choice = true;
+										MuggingS = true;
+										answer = "90";
+									}
+									if (answer.equals("3")) {
+										System.out.println("Well, you can proudly say the first gift you ever got was from a cow rhino who was getting mugged by geese now at least");
+										System.out.println("Recieved item: Moonwalker shirt | +2 Mana");
+										MoonWalker = true;
+										Choice = true;
+										MuggingS = true;
+										answer = "90";
+									}
+								}
+							}
+						}
+					}
+					Choice = false;
+					answer = "90";
+				}
+			}
+		}
+		if (answer.equals("1") && Chicken2 == true) {
+			System.out.println("After reaching the barn all you can see is the angles at which the roofs are facing, you run away in panick");
+			answer = "90";
+		}
+		if (answer.equals("1") && Chicken2 == false) {
+			if (BanditCoop == false) {
+				System.out.println("You discovered BanditCoop");
+				BanditCoop = true;
+			}
+			while(Chicken1 == false) {
+				answer = "90";
+				System.out.println("You come up to big red human looking house, as you enter you hear the creaking of old boards and the smell of straw, as you're walking you encounter a chicken innocently sleeping on the job in a pile of hay");
+				System.out.println("1) Tie him up");
+				System.out.println("2) Fight him");
+				System.out.println("3) Just kill him");
+				answer = choice.next();
+				if (answer.equals("1")) {
+					System.out.println("You tie up the chicken, gained 10 xp");
+					Chicken1 = true;
+					xpR += 10;
+					Chicken1Alive = true;
+				}
+				if (answer.equals("2")) {
+					fight(1, "Chicken", "x", "x", level, 15);
+					if (win == false) {
+						System.out.println("Well, you lost, but on the bright side, at least you got a perk");
+						System.out.println("Perk: Shoulda been more savage | +1 Mdamage");
+						Chicken1 = true;
+					}
+					if (win == true) {
+						win = false;
+						Chicken1 = true;
+					}
+				}
+				if (answer.equals("3")) {
+					while (Chicken1 == false) {
+						System.out.println("Wait really, I mean if you tie him up you gain the same amount of xp, here, maybe you misstyped, ill give the 2 options again");
+						System.out.println("1) Tie him up");
+						System.out.println("2) mmmm nah, still just kill him");
+						answer = choice.next();
+						if (answer.equals("1")) {
+							System.out.println("You tie up the chicken");
+							Chicken1 = true;
+							Chicken1Alive = true;
+						}
+						if (answer.equals("2") && savage == false) {
+							System.out.println("Wow well okay, I guess you stab him, in the heart, and he dies... screaming, jeez I think this is the only death available in this entire game");
+							System.out.println("Gained a perk: Savage | Some more dialogue option will be open ");
+							savage = true;
+							Chicken1 = true;
+							answer = "90";
+						}
+						if (answer.equals("2") && savage == true) {
+							System.out.println("Okay, well that was also pretty, pretty volatile, usually this option wont show up cause who would deny that poor puppy, but no, you did both I guess, usually you would get that savage perk but I guess you're way ahead of that so uh, I guess I'll give you 1 more attack, not a perk but just cause this is a hidden text I suppose?");
+							attack += 1;
+						}
+					}
+					answer = "90";
+				}
+			}
+			if (Chicken2 == false) {
+			System.out.println("After taking care of the guard chicken you come across 3 more chickens working on a coop, they severly outnumber you so you'd best find other means of dealing with them");
+			System.out.println("1) Help them build the coop");
+			System.out.println("2) Trick them into locking themselves in the coop");
+			}
+			while (Chicken2 == false) {
+				answer = choice.next();
+				if (answer.equals("1")) {
+					System.out.println("You come up to the builders and offer to help build the coop, they say that they need the dimmensions right. Oh boy you think, when they told me I'd use geometry to figure out how to solve something in real life I never thought the person who would give me the task would be a narrator who hates math just as much as me but would go out of his way to make my life worse");
+					System.out.println("The ducks tell you that the triangle has 3 sides (duh) they know angle A is 22 degrees and that angle B is 54 degrees and that side A-B is 14, they need you to find side B-C and to add the first 2 decimals rounded up to the final answer (like 5.51 if the answer is 5.507264)");
+					System.out.println("As little hints they tell you to make sure your mental math is in DEG not RAD, and they give you a book with nothing inscribed on it but giberish that kinda looks like https://www.varsitytutors.com/hotmath/hotmath_help/topics/law-of-sines you wonder why it says hotmath twice");
+					System.out.println("As a secondary option you could just guess");
+					while(math == false) {
+						answer = choice.next();
+						try{
+							Double result = Double.valueOf(answer);
+
+							if (result <= 5.40) {
+								System.out.println("Higher");
+							}
+							else if (result >= 5.42) {
+								System.out.println("Lower");
+							}
+							else if (result == 5.41) {
+
+								System.out.println("You finally figure out the dimensions, the chickens thank you, go take a nap and then you tie their hands");
+								System.out.println("You got 15 xp!");
+								xpR += 15;
+								while (math == false) {
+									System.out.println("1) I'm just glad that this is over, lets never do math again");
+									System.out.println("2) Oh no you dont, I deserve more of a payout than that");
+									answer = choice.next();
+									if (answer.equals("1")){
+										System.out.println("Agreed");
+										Chicken2 = true;
+										math = true;
+									}
+									if (answer.equals("2")) {
+										System.out.println("Ok fine I suppose you do.");
+										System.out.println("Gained a nickname: 'nerd'");
+										Chicken2 = true;
+										nerd = true;
+										math = true;
+									}
+								}
+							}
+						} catch(Exception e) {
+							System.out.println("Make sure its a number that you type");
+						}
+						answer = "90";
+					}
+				}
+				if (answer.equals("2")) {
+					System.out.println("To do this you're going to need to be smart, you will need to cause a distraction on either side of the cage to give the impression that you are inside of the cage, the only problem about that is you'll need to know how wide the back of the cage is.");
+					System.out.println(" you know that the coop has 3 sides, you know angle A is 22 degrees and that angle B is 54 degrees and that side A-B is 14, you need to find side B-C and to add the first 2 decimals rounded up to the final answer (like 5.51 if the answer is 5.507264). Oh boy you think, when they told me I'd use geometry to figure out how to solve something in real life I never thought the person who would give me the task would be a narrator who hates math just as much as me but would go out of his way to make my life worse");
+					System.out.println("from what you remember from geometry you need to remember to mentally calculate with DEG not RAD, you also have your trusty book with gibberish written in it that looks something like this. https://www.varsitytutors.com/hotmath/hotmath_help/topics/law-of-sines you wonder why it says hotmath twice");
+					System.out.println("As a secondary option you could just guess");
+					System.out.println("");
+					while(math == false) {
+						answer = choice.next();
+						try{
+							Double result = Double.valueOf(answer);
+
+							if (result <= 5.40) {
+								System.out.println("Higher");
+							}
+							else if (result >= 5.42) {
+								System.out.println("Lower");
+							}
+							else if (result == 5.41) {
+
+								System.out.println("You finally figure out the dimensions");
+								System.out.println("You do some math stuff with how to distract the chickens and it totally worked! the chickens are trapped");
+								System.out.println("You got 15 xp!");
+								xpR += 15;
+								while (math == false) {
+									System.out.println("1) I'm just glad that this is over, lets never do math again");
+									System.out.println("2) Oh no you dont, I deserve more of a payout than that");
+									answer = choice.next();
+									if (answer.equals("1")){
+										System.out.println("Yeah me too");
+										Chicken2 = true;
+										math = true;
+									}
+									if (answer.equals("2")) {
+										System.out.println("Ok fine I suppose you do.");
+										System.out.println("Gained a nickname: 'nerd'");
+										Chicken2 = true;
+										nerd = true;
+										math = true;
+									}
+								}
+							}
+						} catch(Exception e) {
+							System.out.println("Make sure its a number that you type");
+						}
+						answer = "90";
+					}
+				}
+
+			}
+			System.out.println("Finally, you gather the eggs and leave the barn");	
+		}
+
+	}
+	public void ending() {
+		System.out.println("The night is growing dark, and you can see the terrors of backalley street emerging. The 'Ghastly Geese of asGard' must have known that something was going to happen today, you put the staff together and as you are about to head down the street three animals stop you...");
+		System.out.println("'Oh deary, oh deary, may I come with you, all these backalley geese keep pooping in my yard, and they call my son Coockoo, let me come with you on an adventure, so I show them a piece of my mind.' You ask the grandma how well she can fight when suddenly a goose comes at her squacking, as fast as he came he left though, out of no where her grandson tackled the goose and started pecking his face with lightning speed, until she told him to stop");
+		System.out.println("The second animal is a beautiful faerie dragon, you ask her who she is. 'Im the shrew with the eyepatches, names Emerald, I had to hide my eyes as to not give away I was a subsequent, let me come with you so we can take back my homeland'");
+		System.out.println("The third animal is just arriving 'If you don't build your dreams, someone else will hire you to help build theirs.' It's master Oogway, you help him to where he was trying to get and ask why he's here, he says he has enough energy left for one last adventure.");
+		System.out.println("");
+		System.out.println("1) Take Granny");
+		System.out.println("2) Take Emerald");
+		System.out.println("3) Take Master Oogway");
+		Choice = false;
+		while (Choice == false) {
+		answer = choice.next();
+		if (answer.equals("1")) {
+		System.out.println("You take Granny with you, she calls for her grandson (who stays far behind making sure no one tries and jump you two from behind) and you two set off towards Mopeys Magic Store");
+		Choice = true;
+		Granny = true;
+		GrannyU = true;
+		Ally = true;
+		}
+		if (answer.equals("2")) {
+		System.out.println("You take Emerald with you, the two of you set off, Emerald is half flying half walking, ready to pounce if any of the geese come to attack you two");
+		Choice = true;
+		Emerald = true;
+		EmeraldU = true;
+		Ally = true;
+		}
+		if (answer.equals("3")) {
+		System.out.println("You take Master Oogway (my personal favorite :p), and the two of you start heading down Backalley street at a decent speed.. for a turtle");
+		Choice = true;	
+		Oogway = true;
+		OogwayU = true;
+		Ally = true;
+		}
+	}
+		Choice = false;
+		System.out.print("As you and");
+		follower();
+		System.out.println("are heading down the road a lone goose approaches you, he's big, and looks very quick to anger. He reminds you of CockleDoodleDoo, the lone goose charges at you.");
+		fight(1, "Strong Goose", "", "", level + 2, 10);
+		if (win == true) {
+			System.out.println("You step over the goose and keep moving, by now some more geese are starting to approach you, some start quacking, others start brushing past you very harshly and very intentionally, as you approach the Mopeys magic store theres a group of three geese, they look earily similar to the simulation geese you fought, plus theres a skinny goose. The dumb one doesn't wait for any dramatic scenes, he flies at you");
+		}
+		if (win == false) {
+			System.out.print("For the sake of immersion");
+			follower();
+			System.out.println("picks up your slack and pounds the gooses head into a wall, sending him into the dreamworld within an instant, and helps you up. by now some more geese are starting to approach you, some start quacking, others start brushing past you very harshly and very intentionally, as you approach the Mopeys magic store theres a group of three geese, they look earily similar to the simulation ones you fought, plus there's a skinny goose. the dumb one doesnt wait for any dramatic scenes, he flies at you");
+		}
+		fight(3, "DumbGoose", "FatGoose", "SkinnyGoose", level - 1, 20);
+		if (win == true) {
+			System.out.print("You push the fat gooses body aside in order to get through the door, once inside you give Mopey the staff, he mutters some words and with a blinding flash, a huge portal is opened. You see all of the disguised subsequents go through it, Mopey thanks you and goes through the portal, you are about to follow with them (considering you can hear the geese trying to break in the room) when suddenly the portal changes, and instead of the Earthen Footlands, you make out that it will take you to WinterGlade, far north in the Misty Isles, since you don't really have a choice, you and");
+			follower();
+			System.out.println("head towards the portal, as you near it you can feel its slight breeze and smell its see its green pinetrees reflecting over the Breaching River. You go through...");
+			option = true;
+		}
+		if (win == false) {
+			System.out.print("As you fall to the ground a couple of subsequents jump out and quickly bring you and");
+			follower();
+			System.out.print("through the doors. Once inside you give Mopey the staff, he mutters some words and with a blinding flash a huge portal is opened. You see all of the disguised subsequents go through it. Mopey thanks you and goes through the portal, you are about to follow with them (considering you can hear the geese trying to break in the room) when suddenly the portal changes, and instead of the Earthen Footlands, you make out that it will take you to WinterGlade, far north in the Misty Isles, since you don't really have a choice, you ");
+			System.out.println("head towards the portal, as you near it you can feel its slight breeze and smell its see its green pinetrees reflecting over the Breaching River. You go through...");
+			option = true;
+		}
+	}
+}
